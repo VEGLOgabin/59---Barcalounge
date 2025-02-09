@@ -1,0 +1,2198 @@
+<!DOCTYPE html>
+<html lang="en-US">
+ <head>
+  <meta charset="utf-8"/>
+  <script type="text/javascript">
+   /* <![CDATA[ */
+ var gform;gform||(document.addEventListener("gform_main_scripts_loaded",function(){gform.scriptsLoaded=!0}),document.addEventListener("gform/theme/scripts_loaded",function(){gform.themeScriptsLoaded=!0}),window.addEventListener("DOMContentLoaded",function(){gform.domLoaded=!0}),gform={domLoaded:!1,scriptsLoaded:!1,themeScriptsLoaded:!1,isFormEditor:()=>"function"==typeof InitializeEditor,callIfLoaded:function(o){return!(!gform.domLoaded||!gform.scriptsLoaded||!gform.themeScriptsLoaded&&!gform.isFormEditor()||(gform.isFormEditor()&&console.warn("The use of gform.initializeOnLoaded() is deprecated in the form editor context and will be removed in Gravity Forms 3.1."),o(),0))},initializeOnLoaded:function(o){gform.callIfLoaded(o)||(document.addEventListener("gform_main_scripts_loaded",()=>{gform.scriptsLoaded=!0,gform.callIfLoaded(o)}),document.addEventListener("gform/theme/scripts_loaded",()=>{gform.themeScriptsLoaded=!0,gform.callIfLoaded(o)}),window.addEventListener("DOMContentLoaded",()=>{gform.domLoaded=!0,gform.callIfLoaded(o)}))},hooks:{action:{},filter:{}},addAction:function(o,r,e,t){gform.addHook("action",o,r,e,t)},addFilter:function(o,r,e,t){gform.addHook("filter",o,r,e,t)},doAction:function(o){gform.doHook("action",o,arguments)},applyFilters:function(o){return gform.doHook("filter",o,arguments)},removeAction:function(o,r){gform.removeHook("action",o,r)},removeFilter:function(o,r,e){gform.removeHook("filter",o,r,e)},addHook:function(o,r,e,t,n){null==gform.hooks[o][r]&&(gform.hooks[o][r]=[]);var d=gform.hooks[o][r];null==n&&(n=r+"_"+d.length),gform.hooks[o][r].push({tag:n,callable:e,priority:t=null==t?10:t})},doHook:function(r,o,e){var t;if(e=Array.prototype.slice.call(e,1),null!=gform.hooks[r][o]&&((o=gform.hooks[r][o]).sort(function(o,r){return o.priority-r.priority}),o.forEach(function(o){"function"!=typeof(t=o.callable)&&(t=window[t]),"action"==r?t.apply(null,e):e[0]=t.apply(null,e)})),"filter"==r)return e[0]},removeHook:function(o,r,t,n){var e;null!=gform.hooks[o][r]&&(e=(e=gform.hooks[o][r]).filter(function(o,r,e){return!!(null!=n&&n!=o.tag||null!=t&&t!=o.priority)}),gform.hooks[o][r]=e)}}); 
+/* ]]> */
+  </script>
+  <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport"/>
+  <link href="https://gmpg.org/xfn/11" rel="profile"/>
+  <meta content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" name="robots">
+   <style>
+    img:is([sizes="auto" i], [sizes^="auto," i]) { contain-intrinsic-size: 3000px 1500px }
+   </style>
+   <!-- Pixel Cat Facebook Pixel Code -->
+   <script>
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+	n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+	n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+	t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+	document,'script','https://connect.facebook.net/en_US/fbevents.js' );
+	fbq( 'init', '192685531435740' );
+   </script>
+   <!-- DO NOT MODIFY -->
+   <!-- End Facebook Pixel Code -->
+   <!-- This site is optimized with the Yoast SEO plugin v24.4 - https://yoast.com/wordpress/plugins/seo/ -->
+   <title>
+    RELAX | Home | BarcaLounger
+   </title>
+   <link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect">
+    <link href="https://fonts.googleapis.com" rel="preconnect"/>
+    <style type="text/css">
+     @font-face {
+  font-family: 'Cinzel';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/cinzel/v23/8vIU7ww63mVu7gtR-kwKxNvkNOjw-tbnfY3lCA.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Cinzel';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/cinzel/v23/8vIU7ww63mVu7gtR-kwKxNvkNOjw-uTnfY3lCA.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Cinzel';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/cinzel/v23/8vIU7ww63mVu7gtR-kwKxNvkNOjw-gjgfY3lCA.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Cinzel';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/cinzel/v23/8vIU7ww63mVu7gtR-kwKxNvkNOjw-jHgfY3lCA.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Cinzel';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/cinzel/v23/8vIU7ww63mVu7gtR-kwKxNvkNOjw-lbgfY3lCA.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Cinzel';
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/cinzel/v23/8vIU7ww63mVu7gtR-kwKxNvkNOjw-n_gfY3lCA.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Italianno';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/italianno/v17/dg4n_p3sv6gCJkwzT6RXiJwt.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: normal;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/opensans/v40/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsjZ0B4gaVc.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: italic;
+  font-weight: 100;
+  font-stretch: normal;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/roboto/v47/KFOKCnqEu92Fr1Mu53ZEC9_Vu3r1gIhOszmOClHrs6ljXfMMLoHRuAj-lg.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: italic;
+  font-weight: 200;
+  font-stretch: normal;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/roboto/v47/KFOKCnqEu92Fr1Mu53ZEC9_Vu3r1gIhOszmOClHrs6ljXfMMLgHQuAj-lg.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: italic;
+  font-weight: 300;
+  font-stretch: normal;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/roboto/v47/KFOKCnqEu92Fr1Mu53ZEC9_Vu3r1gIhOszmOClHrs6ljXfMMLt_QuAj-lg.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: italic;
+  font-weight: 400;
+  font-stretch: normal;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/roboto/v47/KFOKCnqEu92Fr1Mu53ZEC9_Vu3r1gIhOszmOClHrs6ljXfMMLoHQuAj-lg.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: italic;
+  font-weight: 500;
+  font-stretch: normal;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/roboto/v47/KFOKCnqEu92Fr1Mu53ZEC9_Vu3r1gIhOszmOClHrs6ljXfMMLrPQuAj-lg.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: italic;
+  font-weight: 600;
+  font-stretch: normal;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/roboto/v47/KFOKCnqEu92Fr1Mu53ZEC9_Vu3r1gIhOszmOClHrs6ljXfMMLl_XuAj-lg.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: italic;
+  font-weight: 700;
+  font-stretch: normal;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/roboto/v47/KFOKCnqEu92Fr1Mu53ZEC9_Vu3r1gIhOszmOClHrs6ljXfMMLmbXuAj-lg.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: italic;
+  font-weight: 800;
+  font-stretch: normal;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/roboto/v47/KFOKCnqEu92Fr1Mu53ZEC9_Vu3r1gIhOszmOClHrs6ljXfMMLgHXuAj-lg.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: italic;
+  font-weight: 900;
+  font-stretch: normal;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/roboto/v47/KFOKCnqEu92Fr1Mu53ZEC9_Vu3r1gIhOszmOClHrs6ljXfMMLijXuAj-lg.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 100;
+  font-stretch: normal;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/roboto/v47/KFOMCnqEu92Fr1ME7kSn66aGLdTylUAMQXC89YmC2DPNWubEbFmUiA8.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 200;
+  font-stretch: normal;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/roboto/v47/KFOMCnqEu92Fr1ME7kSn66aGLdTylUAMQXC89YmC2DPNWuZEbVmUiA8.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 300;
+  font-stretch: normal;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/roboto/v47/KFOMCnqEu92Fr1ME7kSn66aGLdTylUAMQXC89YmC2DPNWuaabVmUiA8.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: normal;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/roboto/v47/KFOMCnqEu92Fr1ME7kSn66aGLdTylUAMQXC89YmC2DPNWubEbVmUiA8.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-stretch: normal;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/roboto/v47/KFOMCnqEu92Fr1ME7kSn66aGLdTylUAMQXC89YmC2DPNWub2bVmUiA8.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 600;
+  font-stretch: normal;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/roboto/v47/KFOMCnqEu92Fr1ME7kSn66aGLdTylUAMQXC89YmC2DPNWuYaalmUiA8.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-stretch: normal;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/roboto/v47/KFOMCnqEu92Fr1ME7kSn66aGLdTylUAMQXC89YmC2DPNWuYjalmUiA8.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 800;
+  font-stretch: normal;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/roboto/v47/KFOMCnqEu92Fr1ME7kSn66aGLdTylUAMQXC89YmC2DPNWuZEalmUiA8.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 900;
+  font-stretch: normal;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/roboto/v47/KFOMCnqEu92Fr1ME7kSn66aGLdTylUAMQXC89YmC2DPNWuZtalmUiA8.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Roboto Slab';
+  font-style: normal;
+  font-weight: 100;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/robotoslab/v34/BngbUXZYTXPIvIBgJJSb6s3BzlRRfKOFbvjojIWmb2Rm.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Roboto Slab';
+  font-style: normal;
+  font-weight: 200;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/robotoslab/v34/BngbUXZYTXPIvIBgJJSb6s3BzlRRfKOFbvjoDISmb2Rm.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Roboto Slab';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/robotoslab/v34/BngbUXZYTXPIvIBgJJSb6s3BzlRRfKOFbvjo0oSmb2Rm.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Roboto Slab';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/robotoslab/v34/BngbUXZYTXPIvIBgJJSb6s3BzlRRfKOFbvjojISmb2Rm.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Roboto Slab';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/robotoslab/v34/BngbUXZYTXPIvIBgJJSb6s3BzlRRfKOFbvjovoSmb2Rm.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Roboto Slab';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/robotoslab/v34/BngbUXZYTXPIvIBgJJSb6s3BzlRRfKOFbvjoUoOmb2Rm.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Roboto Slab';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/robotoslab/v34/BngbUXZYTXPIvIBgJJSb6s3BzlRRfKOFbvjoa4Omb2Rm.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Roboto Slab';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/robotoslab/v34/BngbUXZYTXPIvIBgJJSb6s3BzlRRfKOFbvjoDIOmb2Rm.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Roboto Slab';
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/robotoslab/v34/BngbUXZYTXPIvIBgJJSb6s3BzlRRfKOFbvjoJYOmb2Rm.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Satisfy';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/satisfy/v21/rP2Hp2yn6lkG50LoOZQ.ttf) format('truetype');
+}
+    </style>
+    <link as="font" crossorigin="" href="https://fonts.gstatic.com/s/opensans/v18/mem8YaGs126MiZpBA-UFVZ0bf8pkAg.woff2" rel="preload"/>
+    <link as="font" crossorigin="" href="https://www.barcalounger.com/wp-content/themes/mdlr/assets/webfonts/fa-brands-400.woff2" rel="preload"/>
+    <link as="font" crossorigin="" href="https://www.barcalounger.com/wp-content/themes/mdlr-child/fonts/TrajanSansPro-Regular.woff2" rel="preload"/>
+    <link as="font" crossorigin="" href="https://www.barcalounger.com/wp-content/themes/mdlr/assets/webfonts/fa-solid-900.woff2" rel="preload"/>
+    <meta content="Come home to enjoy life’s moments in comfort with BarcaLounger. BarcaLounger specializes in reclining chairs, motion sofas, and pedestal chair furniture." name="description">
+     <link href="https://www.barcalounger.com/" rel="canonical"/>
+     <meta content="en_US" property="og:locale"/>
+     <meta content="website" property="og:type"/>
+     <meta content="RELAX | Home | BarcaLounger" property="og:title"/>
+     <meta content="Come home to enjoy life’s moments in comfort with BarcaLounger. BarcaLounger specializes in reclining chairs, motion sofas, and pedestal chair furniture." property="og:description"/>
+     <meta content="https://www.barcalounger.com/" property="og:url"/>
+     <meta content="Barcalounger" property="og:site_name"/>
+     <meta content="http://www.facebook.com/barcaloungerfurniture/" property="article:publisher"/>
+     <meta content="2025-01-03T20:05:21+00:00" property="article:modified_time"/>
+     <meta content="https://www.barcalounger.com/wp-content/uploads/2024/02/slider-thin-1-scaled.jpg" property="og:image"/>
+     <meta content="1200" property="og:image:width"/>
+     <meta content="287" property="og:image:height"/>
+     <meta content="image/jpeg" property="og:image:type"/>
+     <meta content="summary_large_image" name="twitter:card"/>
+     <script class="yoast-schema-graph" type="application/ld+json">
+      {"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://www.barcalounger.com/","url":"https://www.barcalounger.com/","name":"RELAX | Home | BarcaLounger","isPartOf":{"@id":"https://www.barcalounger.com/#website"},"about":{"@id":"https://www.barcalounger.com/#organization"},"primaryImageOfPage":{"@id":"https://www.barcalounger.com/#primaryimage"},"image":{"@id":"https://www.barcalounger.com/#primaryimage"},"thumbnailUrl":"https://www.barcalounger.com/wp-content/uploads/2024/02/slider-thin-1-scaled.jpg","datePublished":"2024-01-07T17:24:33+00:00","dateModified":"2025-01-03T20:05:21+00:00","description":"Come home to enjoy life’s moments in comfort with BarcaLounger. BarcaLounger specializes in reclining chairs, motion sofas, and pedestal chair furniture.","breadcrumb":{"@id":"https://www.barcalounger.com/#breadcrumb"},"inLanguage":"en-US","potentialAction":[{"@type":"ReadAction","target":["https://www.barcalounger.com/"]}]},{"@type":"ImageObject","inLanguage":"en-US","@id":"https://www.barcalounger.com/#primaryimage","url":"https://www.barcalounger.com/wp-content/uploads/2024/02/slider-thin-1-scaled.jpg","contentUrl":"https://www.barcalounger.com/wp-content/uploads/2024/02/slider-thin-1-scaled.jpg","width":1200,"height":287},{"@type":"BreadcrumbList","@id":"https://www.barcalounger.com/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home"}]},{"@type":"WebSite","@id":"https://www.barcalounger.com/#website","url":"https://www.barcalounger.com/","name":"Barcalounger","description":"Enjoy Life&#039;s Moments","publisher":{"@id":"https://www.barcalounger.com/#organization"},"potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://www.barcalounger.com/?s={search_term_string}"},"query-input":{"@type":"PropertyValueSpecification","valueRequired":true,"valueName":"search_term_string"}}],"inLanguage":"en-US"},{"@type":"Organization","@id":"https://www.barcalounger.com/#organization","name":"BarcaLounger","url":"https://www.barcalounger.com/","logo":{"@type":"ImageObject","inLanguage":"en-US","@id":"https://www.barcalounger.com/#/schema/logo/image/","url":"https://www.barcalounger.com/wp-content/uploads/2024/02/barcalounger-logo-w.png","contentUrl":"https://www.barcalounger.com/wp-content/uploads/2024/02/barcalounger-logo-w.png","width":270,"height":48,"caption":"BarcaLounger"},"image":{"@id":"https://www.barcalounger.com/#/schema/logo/image/"},"sameAs":["http://www.facebook.com/barcaloungerfurniture/"]}]}
+     </script>
+     <meta content="6eBFCRXUu4wMBMDym6JKjirkCEUkVvknA07MtV2JzAI" name="google-site-verification"/>
+     <!-- / Yoast SEO plugin. -->
+     <link href="//www.googletagmanager.com" rel="dns-prefetch"/>
+     <link href="//cdnjs.cloudflare.com" rel="dns-prefetch"/>
+     <link href="//fonts.googleapis.com" rel="dns-prefetch"/>
+     <link href="https://www.barcalounger.com/feed" rel="alternate" title="Barcalounger » Feed" type="application/rss+xml"/>
+     <link href="https://www.barcalounger.com/comments/feed" rel="alternate" title="Barcalounger » Comments Feed" type="application/rss+xml"/>
+     <link href="https://www.barcalounger.com/wp-content/themes/mdlr/boot/css/bootstrap.min.css" id="bootstrap-css" media="all" rel="stylesheet" type="text/css"/>
+     <link href="https://www.barcalounger.com/wp-content/themes/mdlr/assets/vendor/flickity/flickity.css" id="flick-css" media="all" rel="stylesheet" type="text/css"/>
+     <link href="https://www.barcalounger.com/wp-content/plugins/instagram-feed/css/sbi-styles.min.css?ver=6.6.1" id="sbi_styles-css" media="all" rel="stylesheet" type="text/css"/>
+     <style id="classic-theme-styles-inline-css" type="text/css">
+      /*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+     </style>
+     <style id="global-styles-inline-css" type="text/css">
+      :root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--font-family--inter: "Inter", sans-serif;--wp--preset--font-family--cardo: Cardo;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);--wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);}:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}
+:root :where(.wp-block-pullquote){font-size: 1.5em;line-height: 1.6;}
+     </style>
+     <link href="https://www.barcalounger.com/wp-content/plugins/woocommerce/assets/css/woocommerce-layout.css?ver=9.6.1" id="woocommerce-layout-css" media="all" rel="stylesheet" type="text/css"/>
+     <link href="https://www.barcalounger.com/wp-content/plugins/woocommerce/assets/css/woocommerce-smallscreen.css?ver=9.6.1" id="woocommerce-smallscreen-css" media="only screen and (max-width: 768px)" rel="stylesheet" type="text/css"/>
+     <link href="https://www.barcalounger.com/wp-content/plugins/woocommerce/assets/css/woocommerce.css?ver=9.6.1" id="woocommerce-general-css" media="all" rel="stylesheet" type="text/css"/>
+     <style id="woocommerce-inline-inline-css" type="text/css">
+      .woocommerce form .form-row .required { visibility: visible; }
+     </style>
+     <link href="https://www.barcalounger.com/wp-content/plugins/wp-store-locator/css/styles.min.css?ver=2.2.241" id="wpsl-styles-css" media="all" rel="stylesheet" type="text/css"/>
+     <link href="https://www.barcalounger.com/wp-content/plugins/woocommerce-variation-swatches-and-photos/assets/css/swatches-and-photos.css?ver=3.0.6" id="swatches-and-photos-css" media="all" rel="stylesheet" type="text/css"/>
+     <link href="https://www.barcalounger.com/wp-content/plugins/woocommerce/assets/css/brands.css?ver=9.6.1" id="brands-styles-css" media="all" rel="stylesheet" type="text/css"/>
+     <link href="https://www.barcalounger.com/wp-content/themes/mdlr/style.css" id="parent-theme-css" media="all" rel="stylesheet" type="text/css"/>
+     <link href="https://www.barcalounger.com/wp-content/themes/mdlr-child/style.css?ver=6.5.2" id="child-theme-css" media="all" rel="stylesheet" type="text/css"/>
+     <link href="https://www.barcalounger.com/wp-content/themes/mdlr-child/print.css?ver=20180821" id="wpa-print-style-css" media="print" rel="stylesheet" type="text/css"/>
+     <link href="https://www.barcalounger.com/wp-content/themes/mdlr/assets/css/animate/animate.css" id="animate-css" media="all" rel="stylesheet" type="text/css"/>
+     <link href="https://www.barcalounger.com/wp-content/themes/mdlr/css/header-layout.css" id="header-layout-css" media="all" rel="stylesheet" type="text/css"/>
+     <link href="https://www.barcalounger.com/wp-content/themes/mdlr/assets/css/all.css?ver=6.7.1" id="my-font-awesome-css" media="all" rel="stylesheet" type="text/css"/>
+     <link href="https://www.barcalounger.com/wp-content/themes/mdlr/assets/vendor/masonry/css/masonry.css" id="masonry-css-css" media="all" rel="stylesheet" type="text/css"/>
+     <link href="https://www.barcalounger.com/wp-content/themes/mdlr/woocommerce/woocommerce.css?ver=6.7.1" id="mdlr-woocommerce-style-css" media="all" rel="stylesheet" type="text/css"/>
+     <link href="https://www.barcalounger.com/wp-content/plugins/3d-flipbook-dflip-lite/assets/css/dflip.min.css?ver=2.3.57" id="dflip-style-css" media="all" rel="stylesheet" type="text/css"/>
+     <link href="https://www.barcalounger.com/wp-content/plugins/recent-posts-widget-with-thumbnails/public.css?ver=7.1.1" id="recent-posts-widget-with-thumbnails-public-style-css" media="all" rel="stylesheet" type="text/css"/>
+     <link href="https://www.barcalounger.com/wp-content/plugins/elementor/assets/lib/eicons/css/elementor-icons.min.css?ver=5.35.0" id="elementor-icons-css" media="all" rel="stylesheet" type="text/css"/>
+     <link href="https://www.barcalounger.com/wp-content/plugins/elementor/assets/css/frontend.min.css?ver=3.27.3" id="elementor-frontend-css" media="all" rel="stylesheet" type="text/css"/>
+     <link href="https://www.barcalounger.com/wp-content/uploads/elementor/css/post-12871.css?ver=1738873809" id="elementor-post-12871-css" media="all" rel="stylesheet" type="text/css"/>
+     <link href="https://www.barcalounger.com/wp-content/plugins/instagram-feed/css/sbi-styles.min.css?ver=6.6.1" id="sbistyles-css" media="all" rel="stylesheet" type="text/css"/>
+     <link href="https://www.barcalounger.com/wp-content/plugins/elementor/assets/lib/animations/styles/fadeInUp.min.css?ver=3.27.3" id="e-animation-fadeInUp-css" media="all" rel="stylesheet" type="text/css"/>
+     <link href="https://www.barcalounger.com/wp-content/plugins/elementor/assets/lib/swiper/v8/css/swiper.min.css?ver=8.4.5" id="swiper-css" media="all" rel="stylesheet" type="text/css"/>
+     <link href="https://www.barcalounger.com/wp-content/plugins/elementor/assets/css/conditionals/e-swiper.min.css?ver=3.27.3" id="e-swiper-css" media="all" rel="stylesheet" type="text/css"/>
+     <link href="https://www.barcalounger.com/wp-content/plugins/elementor-pro/assets/css/widget-slides.min.css?ver=3.27.3" id="widget-slides-css" media="all" rel="stylesheet" type="text/css"/>
+     <link href="https://www.barcalounger.com/wp-content/plugins/elementor-pro/assets/css/widget-flip-box.min.css?ver=3.27.3" id="widget-flip-box-css" media="all" rel="stylesheet" type="text/css"/>
+     <link href="https://www.barcalounger.com/wp-content/plugins/elementor/assets/css/widget-image.min.css?ver=3.27.3" id="widget-image-css" media="all" rel="stylesheet" type="text/css"/>
+     <link href="https://www.barcalounger.com/wp-content/plugins/elementor/assets/css/widget-divider.min.css?ver=3.27.3" id="widget-divider-css" media="all" rel="stylesheet" type="text/css"/>
+     <link href="https://www.barcalounger.com/wp-content/uploads/elementor/css/post-17890.css?ver=1738873811" id="elementor-post-17890-css" media="all" rel="stylesheet" type="text/css"/>
+     <link href="https://www.barcalounger.com/wp-content/themes/mdlr-child/css/acf-styles.css" id="acf-styles-css" media="all" rel="stylesheet" type="text/css"/>
+     <link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+     <script id="woocommerce-google-analytics-integration-gtag-js-after" type="text/javascript">
+      /* <![CDATA[ */
+/* Google Analytics for WooCommerce (gtag.js) */
+					window.dataLayer = window.dataLayer || [];
+					function gtag(){dataLayer.push(arguments);}
+					// Set up default consent state.
+					for ( const mode of [{"analytics_storage":"denied","ad_storage":"denied","ad_user_data":"denied","ad_personalization":"denied","region":["AT","BE","BG","HR","CY","CZ","DK","EE","FI","FR","DE","GR","HU","IS","IE","IT","LV","LI","LT","LU","MT","NL","NO","PL","PT","RO","SK","SI","ES","SE","GB","CH"]}] || [] ) {
+						gtag( "consent", "default", { "wait_for_update": 500, ...mode } );
+					}
+					gtag("js", new Date());
+					gtag("set", "developer_id.dOGY3NW", true);
+					gtag("config", "G-NK8XZJECLB", {"track_404":true,"allow_google_signals":true,"logged_in":false,"linker":{"domains":[],"allow_incoming":false},"custom_map":{"dimension1":"logged_in"}});
+/* ]]> */
+     </script>
+     <script id="jquery-core-js" src="https://www.barcalounger.com/wp-includes/js/jquery/jquery.min.js?ver=3.7.1" type="text/javascript">
+     </script>
+     <script id="jquery-migrate-js" src="https://www.barcalounger.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1" type="text/javascript">
+     </script>
+     <script data-wp-strategy="defer" defer="defer" id="jquery-blockui-js" src="https://www.barcalounger.com/wp-content/plugins/woocommerce/assets/js/jquery-blockui/jquery.blockUI.min.js?ver=2.7.0-wc.9.6.1" type="text/javascript">
+     </script>
+     <script data-wp-strategy="defer" defer="defer" id="js-cookie-js" src="https://www.barcalounger.com/wp-content/plugins/woocommerce/assets/js/js-cookie/js.cookie.min.js?ver=2.1.4-wc.9.6.1" type="text/javascript">
+     </script>
+     <script id="woocommerce-js-extra" type="text/javascript">
+      /* <![CDATA[ */
+var woocommerce_params = {"ajax_url":"\/wp-admin\/admin-ajax.php","wc_ajax_url":"\/?wc-ajax=%%endpoint%%"};
+/* ]]> */
+     </script>
+     <script data-wp-strategy="defer" defer="defer" id="woocommerce-js" src="https://www.barcalounger.com/wp-content/plugins/woocommerce/assets/js/frontend/woocommerce.min.js?ver=9.6.1" type="text/javascript">
+     </script>
+     <link href="https://www.barcalounger.com/wp-json/" rel="https://api.w.org/">
+      <link href="https://www.barcalounger.com/wp-json/wp/v2/pages/17890" rel="alternate" title="JSON" type="application/json"/>
+      <link href="https://www.barcalounger.com/xmlrpc.php?rsd" rel="EditURI" title="RSD" type="application/rsd+xml"/>
+      <link href="https://www.barcalounger.com/" rel="shortlink"/>
+      <link href="https://www.barcalounger.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.barcalounger.com%2F" rel="alternate" title="oEmbed (JSON)" type="application/json+oembed"/>
+      <link href="https://www.barcalounger.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.barcalounger.com%2F&amp;format=xml" rel="alternate" title="oEmbed (XML)" type="text/xml+oembed"/>
+      <style id="simple-css-output" type="text/css">
+       .secondary-navigation ul li a, .header-navigation a, .secondary-navigation .navbar-nav a { font-size:13px!important; }.coming-this-fall, .limited-quantities { overflow: hidden;}.coming-this-fall:before { width: 250px; background: #0000008c; position: absolute; text-align: center; line-height: 50px; letter-spacing: 1px; color: #f0f0f0; bottom: 25px; left: -75px; transform: rotate(45deg); -webkit-transform: rotate(45deg); overflow: hidden; content: "Coming this Fall"; pointer-events: none; font-size: 14px;}.limited-quantities:before { width: 250px; background: #ce00008c; position: absolute; text-align: center; line-height: 50px; letter-spacing: 1px; color: #f0f0f0; bottom: 25px; left: -75px; transform: rotate(45deg); -webkit-transform: rotate(45deg); overflow: hidden; content: "Limited Quantities"; pointer-events: none; font-size: 11px; font-weight: bold;}.page.page-id-12872 h1.entry-title { font-size: 35px;} li.dealerlogin a.nav-link { background: #393939; padding: 4px 8px !important; margin: 8px; border: 1px solid #000; color: #fff;}body:not(.single) .limited .card:before { width:100%; bottom: 22%;}
+      </style>
+      <noscript>
+       <style>
+        .woocommerce-product-gallery{ opacity: 1 !important; }
+       </style>
+      </noscript>
+      <meta content="Elementor 3.27.3; features: additional_custom_breakpoints; settings: css_print_method-external, google_font-enabled, font_display-auto" name="generator"/>
+      <style>
+       .e-con.e-parent:nth-of-type(n+4):not(.e-lazyloaded):not(.e-no-lazyload),
+				.e-con.e-parent:nth-of-type(n+4):not(.e-lazyloaded):not(.e-no-lazyload) * {
+					background-image: none !important;
+				}
+				@media screen and (max-height: 1024px) {
+					.e-con.e-parent:nth-of-type(n+3):not(.e-lazyloaded):not(.e-no-lazyload),
+					.e-con.e-parent:nth-of-type(n+3):not(.e-lazyloaded):not(.e-no-lazyload) * {
+						background-image: none !important;
+					}
+				}
+				@media screen and (max-height: 640px) {
+					.e-con.e-parent:nth-of-type(n+2):not(.e-lazyloaded):not(.e-no-lazyload),
+					.e-con.e-parent:nth-of-type(n+2):not(.e-lazyloaded):not(.e-no-lazyload) * {
+						background-image: none !important;
+					}
+				}
+      </style>
+      <style class="wp-fonts-local" type="text/css">
+       @font-face{font-family:Inter;font-style:normal;font-weight:300 900;font-display:fallback;src:url('https://www.barcalounger.com/wp-content/plugins/woocommerce/assets/fonts/Inter-VariableFont_slnt,wght.woff2') format('woff2');font-stretch:normal;}
+@font-face{font-family:Cardo;font-style:normal;font-weight:400;font-display:fallback;src:url('https://www.barcalounger.com/wp-content/plugins/woocommerce/assets/fonts/cardo_normal_400.woff2') format('woff2');}
+      </style>
+      <link href="https://www.barcalounger.com/wp-content/uploads/2018/03/barcaloungercom-favicon-150x150.png" rel="icon" sizes="32x32"/>
+      <link href="https://www.barcalounger.com/wp-content/uploads/2018/03/barcaloungercom-favicon-300x300.png" rel="icon" sizes="192x192"/>
+      <link href="https://www.barcalounger.com/wp-content/uploads/2018/03/barcaloungercom-favicon-180x180.png" rel="apple-touch-icon"/>
+      <meta content="https://www.barcalounger.com/wp-content/uploads/2018/03/barcaloungercom-favicon-300x300.png" name="msapplication-TileImage">
+       <style id="wp-custom-css" type="text/css">
+        /* MODIFYING GLOBAL CONTAINER */
+@media screen and (min-width:968px) {
+	.container {
+	max-width:1470px;
+}
+}
+span.near_you {
+	display:none;
+}
+/* nav button options */
+@media (min-width: 1400px) {
+	span.near_you {
+		display:inline-block;
+	}
+}
+@media (min-width: 992px) {
+    .navbar-expand-lg .navbar-nav .nav-link {
+        padding:0;
+			margin: 0;
+    }
+}
+ul.navbar-nav li.btn__nav {
+    padding: 4px 8px !important;
+		margin:5px 0;
+	display:flex;
+	align-items:center;
+	justify-content:left;
+    border: 1px solid #000;
+}
+
+ul.navbar-nav li.btn__beige {
+    background: #BE7C4D;
+}
+ul.navbar-nav li.btn__blue {
+    background: #6F8695;
+}
+ul.navbar-nav li.btn__navy {
+    background: #154c79;
+    color: #fff;
+}
+ul.navbar-nav li.btn__gold {
+    background: #C9AC70;
+}
+ul.navbar-nav li.btn__brown {
+    background: #873e23;
+}
+ul.navbar-nav li.btn__red, .warranty-button {
+    background: #800020;
+    color: #fff;
+}
+ul.navbar-nav li.btn__green {
+    background: #214E34;
+}
+ul.navbar-nav li.btn__silver,
+li.dealerlogin a.nav-link {
+    background: #909090;
+}
+li.dealerlogin a.nav-link {
+	border:none;
+}
+
+.secondary-navigation ul li a, .header-navigation a, .secondary-navigation .navbar-nav a {
+    color: #fff !important;
+}
+/* small style edits */
+#wpsl-search-wrap input#wpsl-search-btn {
+	background: #C9AC70!important;
+	color:#000!important;
+	text-shadow:none;
+}
+
+#menu-primary li a {
+	font-size:10px!important;
+}
+li.findastore.burgundy a.nav-link {
+	background:#800020;
+}
+ul#menu-information li:not(:last-of-type) + li::before { content: " | "; }
+.home-flip-box-noback .elementor-flip-box__front,
+.home-flip-box .elementor-flip-box__front {
+	background-color:transparent!important;
+}
+.home-flip-box .elementor-flip-box__front h3 {
+		text-shadow: 1px 4px 3px rgba(0,0,0,0.56);
+    transition:.2s;
+    transition-delay:.2s;
+    opacity:1;
+}
+.home-flip-box:hover .elementor-flip-box__front h3 {
+    transform:translateY(50px);
+    opacity:0;
+}
+#footer-container,
+.site-footer {
+	background-color:#020202;
+}
+#footer-container .container {
+	max-width:100%;
+}
+#footer-container .mdlr-button.color-barca {
+	background-color:#C9AC70;
+
+}
+#footer-container .widget:first-of-type .mdlr-button.color-barca {
+	background-color:#800020;
+	color:#fff!important;
+}
+
+/* product list styles */
+.woocommerce .products .card.loop-card {position:relative;}
+.woocommerce-loop-product__subtitle {
+	position:absolute; 
+	bottom:10px; 
+	right: 10px; 
+	color:#000; 
+	font-family: 'Trajan Sans Pro', sans-serif;
+}
+h2.woocommerce-loop-product__title, 
+input.variation_id,
+.d-none {
+	display:none;
+}
+body.home div#content.container {
+	max-width:unset;
+	width:100%;
+	padding:0;
+}
+body.home div#content.container #main {
+	padding-top:0;
+}
+body.search .loop-card img {
+	display:block;
+	margin:auto;
+}
+.navbar-toggler-icon { background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");}
+
+#sb_instagram .sb_instagram_header a .sbi_header_img_hover, #sb_instagram .sb_instagram_header a .sbi_header_img_hover, .sb_instagram_header a .sbi_header_img_hover, .sb_instagram_header a .sbi_header_img_hover {
+	opacity:1;
+	background:#000
+}
+
+@media screen and (max-width:598px) {
+	.elementor-element-5ecf47f {
+		display:none;
+	}
+	.woocommerce-loop-product__subtitle {
+		position: relative;
+    bottom: unset;
+    left: unset;
+    right: unset;
+    text-align: center;
+    display: block;
+		margin-top:5px;
+		margin-bottom:5px;
+		min-height:5em;
+	}
+}
+
+.variations > tbody:nth-child(1) > tr:nth-child(2) > td:nth-child(1) {
+	margin-top: 20px;
+}
+
+
+
+
+.page-id-134 .checkbox.gchoice {
+  width: 25%;
+  float: left; font-size: .8em;
+}
+@media (min-width: 992px) {
+  .page-id-134 .offset-lg-3 {
+    margin-left: 15%;
+		flex: 0 0 70%;
+    max-width: 70%;
+  }
+}
+       </style>
+      </meta>
+     </link>
+    </meta>
+   </link>
+  </meta>
+ </head>
+ <body class="mdlr home page-template-default page page-id-17890 wp-custom-logo theme-mdlr woocommerce-no-js iconic-woothumbs-mdlr-child no-sidebar full-width header-left has-secondary no-hero woocommerce-active elementor-default elementor-kit-12871 elementor-page elementor-page-17890">
+  <div class="site" id="page">
+   <a class="skip-link screen-reader-text" href="#content">
+    Skip to content
+   </a>
+   <div class="mobile-quick-links-container d-lg-none" style="border-top:1px solid #000">
+    <ul class="mobile-quick-links">
+     <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-19 nav-item dropdown" id="menu-item-19">
+      <a class="nav-link dropdown-toggle" href="https://www.barcalounger.com/find-a-retailer">
+       Find a Retailer
+      </a>
+     </li>
+    </ul>
+   </div>
+   <div id="top-bar">
+    <div class="container">
+     <div class="row">
+     </div>
+    </div>
+   </div>
+   <div id="header-container">
+    <header class="site-header container" id="masthead">
+     <div class="row">
+      <div class="col-md-3 d-flex justify-content-between align-items-center">
+       <div class="site-branding">
+        <div id="header-logo">
+         <a aria-current="page" class="custom-logo-link" href="https://www.barcalounger.com/" rel="home">
+          <img alt="barcalounger-logo-w" class="custom-logo" decoding="async" height="48" src="https://www.barcalounger.com/wp-content/uploads/2024/02/barcalounger-logo-w.png" title="barcalounger-logo-w" width="270"/>
+         </a>
+        </div>
+       </div>
+       <button class="navbar-toggler d-lg-none align-self-center my-2" data-target=".navbars" data-toggle="collapse" type="button">
+        <span class="navbar-toggler-icon">
+        </span>
+       </button>
+      </div>
+      <div class="col-md-9">
+       <nav class="header-navigation secondary-navigation navbar navbar-expand-lg p-0" id="site-secondary-navigation">
+        <div class="collapse navbars navbar-collapse flex-column justify-content-end align-items-end" id="navbarCollapse">
+         <div class="on-top">
+          <ul class="list-group-horizontal m-0 p-0" id="mdlr-social">
+           <li class="list-group-item">
+            <a class="nav-link" href="https://www.facebook.com/barcaloungerfurniture/" rel="me" target="_blank">
+             <i class="fab fa-facebook-square">
+             </i>
+            </a>
+           </li>
+           <li class="list-group-item">
+            <a class="nav-link" href="https://www.instagram.com/barcalounger/" rel="me" target="_blank">
+             <i class="fab fa-instagram">
+             </i>
+            </a>
+           </li>
+           <li class="list-group-item">
+            <a class="nav-link" href="https://www.youtube.com/channel/UC6d8DrcNAo4-I1aa7OnAPiA" rel="me" target="_blank">
+             <i class="fab fa-youtube-square">
+             </i>
+            </a>
+           </li>
+          </ul>
+          <form action="https://www.barcalounger.com/" class="form-inline p-0 ml-2" id="searchform" method="get" role="search">
+           <div class="input-group">
+            <input class="field form-control" id="woocommerce-product-search-field-0" name="s" placeholder="Search by Style, Number, name, or cover name" type="search" value=""/>
+           </div>
+          </form>
+         </div>
+         <!--ontop-->
+         <div class="on-bottom row no-gutters w-100 px-md-0 px-0">
+          <div class="col">
+           <ul class="navbar-nav justify-content-end" id="menu-secondary">
+            <li class="btn__nav btn__navy menu-item menu-item-type-post_type menu-item-object-page menu-item-18616 nav-item" id="menu-item-18616" itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement">
+             <a class="nav-link" href="https://www.barcalounger.com/warranty" title="Warranty">
+              Warranty
+             </a>
+            </li>
+            <li class="btn__nav btn__beige menu-item menu-item-type-post_type menu-item-object-page menu-item-10991 nav-item" id="menu-item-10991" itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement">
+             <a class="nav-link" href="https://www.barcalounger.com/parts-services" title="Parts &amp; Service">
+              Parts &amp; Service
+             </a>
+            </li>
+            <li class="btn__nav btn__gold menu-item menu-item-type-custom menu-item-object-custom menu-item-18221 nav-item" id="menu-item-18221" itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement">
+             <a class="nav-link" href="https://www.barcalounger.com/order-swatch" title="Request Swatches">
+              Request Swatches
+             </a>
+            </li>
+            <li class="ask-alex-btn btn__nav btn__brown menu-item menu-item-type-custom menu-item-object-custom menu-item-18220 nav-item" id="menu-item-18220" itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement">
+             <a class="nav-link" href="#inquiry" title="Questions?">
+              Questions?
+             </a>
+            </li>
+            <li class="btn__nav btn__green menu-item menu-item-type-post_type menu-item-object-page menu-item-18617 nav-item" id="menu-item-18617" itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement">
+             <a class="nav-link" href="https://www.barcalounger.com/digital-catalog" title="Digital Catalog">
+              Digital Catalog
+             </a>
+            </li>
+            <li class="btn__nav btn__red menu-item menu-item-type-post_type menu-item-object-page menu-item-18222 nav-item" id="menu-item-18222" itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement">
+             <a class="nav-link" href="https://www.barcalounger.com/contact-us" title="Contact">
+              Contact
+             </a>
+            </li>
+            <li class="findastore btn__nav btn__blue menu-item menu-item-type-post_type menu-item-object-page menu-item-19 nav-item" id="menu-item-19" itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement">
+             <a class="nav-link" href="https://www.barcalounger.com/find-a-retailer" title="Find a Retailer  Near You">
+              Find a Retailer
+              <span class="near_you">
+               Near You
+              </span>
+             </a>
+            </li>
+            <li class="dealerlogin btn__nav btn__silver menu-item menu-item-type-custom menu-item-object-custom menu-item-15847 nav-item" id="menu-item-15847" itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement">
+             <a class="nav-link" href="https://cms.amptab.com/Manufacturer/12882/Shop2" target="_blank" title="Dealer Login">
+              Dealer Login
+             </a>
+            </li>
+           </ul>
+          </div>
+         </div>
+         <!--onbottom-->
+        </div>
+       </nav>
+       <!-- #site-navigation -->
+      </div>
+     </div>
+    </header>
+   </div>
+   <div id="nav-container">
+    <nav class="navbar navbar-expand-lg p-0 col-full" id="site-navigation">
+     <div class="collapse navbars navbar-collapse" id="primaryNav">
+      <div class="menu-primary-container">
+       <ul class="navbar-nav mr-auto" id="menu-primary">
+        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-17803 nav-item" id="menu-item-17803" itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement">
+         <a class="nav-link" href="https://www.barcalounger.com/view-all-options" title="Shop All Products">
+          Shop All Products
+         </a>
+        </li>
+        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-17779 nav-item" id="menu-item-17779" itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement">
+         <a class="nav-link" href="https://www.barcalounger.com/covers" title="Browse by Covers">
+          Browse by Covers
+         </a>
+        </li>
+        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-17821 nav-item" id="menu-item-17821" itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement">
+         <a class="nav-link" href="https://www.barcalounger.com/motion-groups" title="Motion Groups">
+          Motion Groups
+         </a>
+        </li>
+        <li class="menu-item menu-item-type-taxonomy menu-item-object-bl_seating_type menu-item-has-children dropdown menu-item-1943 nav-item" id="menu-item-1943" itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement">
+         <a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle nav-link" data-toggle="dropdown" href="#" id="menu-item-dropdown-1943" title="Recliners">
+          Recliners
+         </a>
+         <ul aria-labelledby="menu-item-dropdown-1943" class="dropdown-menu" role="menu">
+          <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1951 nav-item" id="menu-item-1951" itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement">
+           <a class="dropdown-item" href="/seating/recliners" title="All Recliners">
+            All Recliners
+           </a>
+          </li>
+          <li class="menu-item menu-item-type-taxonomy menu-item-object-bl_seating_type menu-item-4171 nav-item" id="menu-item-4171" itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement">
+           <a class="dropdown-item" href="https://www.barcalounger.com/seating/big-and-tall" title="Big and Tall">
+            Big and Tall
+           </a>
+          </li>
+          <li class="menu-item menu-item-type-taxonomy menu-item-object-bl_seating_type menu-item-1947 nav-item" id="menu-item-1947" itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement">
+           <a class="dropdown-item" href="https://www.barcalounger.com/seating/handle-activated-recliners" title="Handle Activated Recliners">
+            Handle Activated Recliners
+           </a>
+          </li>
+          <li class="menu-item menu-item-type-taxonomy menu-item-object-bl_mechanism_type menu-item-19199 nav-item" id="menu-item-19199" itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement">
+           <a class="dropdown-item" href="https://www.barcalounger.com/mechanism/push-thru-arms" title="Push Through the Arms">
+            Push Through the Arms
+           </a>
+          </li>
+          <li class="menu-item menu-item-type-taxonomy menu-item-object-bl_seating_type menu-item-1945 nav-item" id="menu-item-1945" itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement">
+           <a class="dropdown-item" href="https://www.barcalounger.com/seating/power-recliner" title="Power Recliners">
+            Power Recliners
+           </a>
+          </li>
+          <li class="menu-item menu-item-type-taxonomy menu-item-object-bl_seating_type menu-item-1949 nav-item" id="menu-item-1949" itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement">
+           <a class="dropdown-item" href="https://www.barcalounger.com/seating/power-rocker-recliners" title="Power Rocker Recliners">
+            Power Rocker Recliners
+           </a>
+          </li>
+          <li class="menu-item menu-item-type-taxonomy menu-item-object-bl_seating_type menu-item-17784 nav-item" id="menu-item-17784" itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement">
+           <a class="dropdown-item" href="https://www.barcalounger.com/seating/swivel-glider-recliners" title="Swivel Glider Recliners">
+            Swivel Glider Recliners
+           </a>
+          </li>
+          <li class="menu-item menu-item-type-taxonomy menu-item-object-bl_seating_type menu-item-18117 nav-item" id="menu-item-18117" itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement">
+           <a class="dropdown-item" href="https://www.barcalounger.com/seating/swivel-power-recliners" title="Swivel Power Recliners">
+            Swivel Power Recliners
+           </a>
+          </li>
+          <li class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-10984 nav-item" id="menu-item-10984" itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement">
+           <a class="dropdown-item" href="https://www.barcalounger.com/collection/zero-gravity" title="Zero Gravity">
+            Zero Gravity
+           </a>
+          </li>
+         </ul>
+        </li>
+        <li class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-1870 nav-item" id="menu-item-1870" itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement">
+         <a class="nav-link" href="https://www.barcalounger.com/collection/pedestal-chairs-ottomans" title="Pedestal Chairs &amp; Ottomans">
+          Pedestal Chairs &amp; Ottomans
+         </a>
+        </li>
+        <li class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-18942 nav-item" id="menu-item-18942" itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement">
+         <a class="nav-link" href="https://www.barcalounger.com/collection/lift-chair" title="Lift Chairs">
+          Lift Chairs
+         </a>
+        </li>
+        <li class="menu-item menu-item-type-taxonomy menu-item-object-bl_seating_type menu-item-19276 nav-item" id="menu-item-19276" itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement">
+         <a class="nav-link" href="https://www.barcalounger.com/seating/sectionals" title="Sectionals">
+          Sectionals
+         </a>
+        </li>
+        <li class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-16715 nav-item" id="menu-item-16715" itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement">
+         <a class="nav-link" href="https://www.barcalounger.com/collection/kids-recliners" title="Kid's Recliners">
+          Kid’s Recliners
+         </a>
+        </li>
+       </ul>
+      </div>
+     </div>
+    </nav>
+    <!-- #site-navigation -->
+   </div>
+   <div id="content-container">
+    <div class="site-content container" id="content">
+     <div class="row">
+      <div class="page-master-col col-md-12 no-sidebar content-area" id="primary">
+       <main class="site-main" id="main">
+        <article class="post-17890 page type-page status-publish hentry" id="post-17890">
+         <div class="entry-content">
+          <div class="elementor elementor-17890" data-elementor-id="17890" data-elementor-post-type="page" data-elementor-type="wp-page">
+           <section class="elementor-section elementor-top-section elementor-element elementor-element-afc33a0 elementor-section-full_width elementor-section-height-default elementor-section-height-default" data-element_type="section" data-id="afc33a0">
+            <div class="elementor-container elementor-column-gap-default">
+             <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-f2c6d4a" data-element_type="column" data-id="f2c6d4a">
+              <div class="elementor-widget-wrap elementor-element-populated">
+               <div class="elementor-element elementor-element-5ecf47f elementor--h-position-right elementor--v-position-top elementor-arrows-position-inside elementor-pagination-position-inside elementor-widget elementor-widget-slides" data-element_type="widget" data-id="5ecf47f" data-settings='{"transition":"fade","navigation":"both","autoplay":"yes","pause_on_hover":"yes","pause_on_interaction":"yes","autoplay_speed":5000,"infinite":"yes","transition_speed":500}' data-widget_type="slides.default" id="hmpg2024">
+                <div class="elementor-widget-container">
+                 <div class="elementor-swiper">
+                  <div aria-label="Slides" aria-roledescription="carousel" class="elementor-slides-wrapper elementor-main-swiper swiper" data-animation="fadeInUp" dir="ltr" role="region">
+                   <div class="swiper-wrapper elementor-slides">
+                    <div aria-roledescription="slide" class="elementor-repeater-item-59b5baa swiper-slide" role="group">
+                     <div class="swiper-slide-bg" role="img">
+                     </div>
+                     <a class="swiper-slide-inner" href="https://www.barcalounger.com/view-all-options/kimball">
+                      <div class="swiper-slide-contents">
+                       <div class="elementor-slide-heading">
+                        Kimball
+                       </div>
+                       <div class="elementor-slide-description">
+                        Modern Expression
+                       </div>
+                       <div class="elementor-button elementor-slide-button elementor-size-sm">
+                        Shop Kimball
+                       </div>
+                      </div>
+                     </a>
+                    </div>
+                    <div aria-roledescription="slide" class="elementor-repeater-item-a3d815e swiper-slide" role="group">
+                     <div class="swiper-slide-bg" role="img">
+                     </div>
+                     <a class="swiper-slide-inner" href="https://www.barcalounger.com/view-all-options/sandover">
+                      <div class="swiper-slide-contents">
+                       <div class="elementor-slide-heading">
+                        Sandover
+                       </div>
+                       <div class="elementor-button elementor-slide-button elementor-size-sm">
+                        Shop Motion Groups
+                       </div>
+                      </div>
+                     </a>
+                    </div>
+                    <div aria-roledescription="slide" class="elementor-repeater-item-2bf555d swiper-slide" role="group">
+                     <div class="swiper-slide-bg" role="img">
+                     </div>
+                     <a class="swiper-slide-inner" href="https://www.barcalounger.com/view-all-options/pierce">
+                      <div class="swiper-slide-contents">
+                       <div class="elementor-slide-heading">
+                        Pierce
+                       </div>
+                       <div class="elementor-slide-description">
+                        Motion Groups
+                       </div>
+                       <div class="elementor-button elementor-slide-button elementor-size-sm">
+                        Shop Pierce
+                       </div>
+                      </div>
+                     </a>
+                    </div>
+                    <div aria-roledescription="slide" class="elementor-repeater-item-fe337ff swiper-slide" role="group">
+                     <div class="swiper-slide-bg" role="img">
+                     </div>
+                     <a class="swiper-slide-inner" href="https://www.barcalounger.com/view-all-options/kester">
+                      <div class="swiper-slide-contents">
+                      </div>
+                     </a>
+                    </div>
+                    <div aria-roledescription="slide" class="elementor-repeater-item-e35bd22 swiper-slide" role="group">
+                     <div class="swiper-slide-bg" role="img">
+                     </div>
+                     <div class="swiper-slide-inner">
+                      <div class="swiper-slide-contents">
+                      </div>
+                     </div>
+                    </div>
+                    <div aria-roledescription="slide" class="elementor-repeater-item-96b68c5 swiper-slide" role="group">
+                     <div class="swiper-slide-bg" role="img">
+                     </div>
+                     <a class="swiper-slide-inner" href="https://www.barcalounger.com/motion-groups">
+                      <div class="swiper-slide-contents">
+                       <div class="elementor-slide-heading">
+                        Kaden
+                       </div>
+                       <div class="elementor-button elementor-slide-button elementor-size-sm">
+                        Shop Motion Groups
+                       </div>
+                      </div>
+                     </a>
+                    </div>
+                   </div>
+                   <div aria-label="Previous slide" class="elementor-swiper-button elementor-swiper-button-prev" role="button" tabindex="0">
+                    <i aria-hidden="true" class="eicon-chevron-left">
+                    </i>
+                   </div>
+                   <div aria-label="Next slide" class="elementor-swiper-button elementor-swiper-button-next" role="button" tabindex="0">
+                    <i aria-hidden="true" class="eicon-chevron-right">
+                    </i>
+                   </div>
+                   <div class="swiper-pagination">
+                   </div>
+                  </div>
+                 </div>
+                </div>
+               </div>
+              </div>
+             </div>
+            </div>
+           </section>
+           <section class="elementor-section elementor-top-section elementor-element elementor-element-5fcd65f elementor-section-full_width elementor-section-height-default elementor-section-height-default" data-element_type="section" data-id="5fcd65f">
+            <div class="elementor-container elementor-column-gap-default">
+             <div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-00f4759" data-element_type="column" data-id="00f4759" data-settings='{"background_background":"classic"}'>
+              <div class="elementor-widget-wrap elementor-element-populated">
+               <div class="elementor-element elementor-element-fec6e2c elementor-flip-box--effect-slide home-flip-box animated-slow elementor-flip-box--direction-up elementor-widget elementor-widget-flip-box" data-element_type="widget" data-id="fec6e2c" data-settings='{"_animation":"none"}' data-widget_type="flip-box.default">
+                <div class="elementor-widget-container">
+                 <div class="elementor-flip-box" tabindex="0">
+                  <div class="elementor-flip-box__layer elementor-flip-box__front">
+                   <div class="elementor-flip-box__layer__overlay">
+                    <div class="elementor-flip-box__layer__inner">
+                     <h3 class="elementor-flip-box__layer__title">
+                      Woodlands
+                     </h3>
+                    </div>
+                   </div>
+                  </div>
+                  <a class="elementor-flip-box__layer elementor-flip-box__back" href="https://www.barcalounger.com/view-all-options/ashland-b?attribute_pa_covers=marisol-flint">
+                   <div class="elementor-flip-box__layer__overlay">
+                    <div class="elementor-flip-box__layer__inner">
+                     <h3 class="elementor-flip-box__layer__title">
+                      Ashland
+                     </h3>
+                     <div class="elementor-flip-box__layer__description">
+                      Modern exposed wood frame push thru the arm 3-way recliner featuring a welted box seat styled pad over chaise with pocketed coil springs, split 43.3” high pub back, and upholstered cap arms. Rustic Brown finish.
+                     </div>
+                     <span class="elementor-flip-box__button elementor-button elementor-size-sm">
+                      View More
+                     </span>
+                    </div>
+                   </div>
+                  </a>
+                 </div>
+                </div>
+               </div>
+              </div>
+             </div>
+             <div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-b9b24d0" data-element_type="column" data-id="b9b24d0">
+              <div class="elementor-widget-wrap elementor-element-populated">
+               <div class="elementor-element elementor-element-ed516d4 elementor-flip-box--effect-slide home-flip-box animated-slow elementor-flip-box--direction-up elementor-widget elementor-widget-flip-box" data-element_type="widget" data-id="ed516d4" data-settings='{"_animation":"none"}' data-widget_type="flip-box.default">
+                <div class="elementor-widget-container">
+                 <div class="elementor-flip-box" tabindex="0">
+                  <div class="elementor-flip-box__layer elementor-flip-box__front">
+                   <div class="elementor-flip-box__layer__overlay">
+                    <div class="elementor-flip-box__layer__inner">
+                     <h3 class="elementor-flip-box__layer__title">
+                      Heads Up
+                     </h3>
+                    </div>
+                   </div>
+                  </div>
+                  <a class="elementor-flip-box__layer elementor-flip-box__back" href="https://www.barcalounger.com/view-all-options/luca-power-recline?attribute_pa_covers=bentley-dove">
+                   <div class="elementor-flip-box__layer__overlay">
+                    <div class="elementor-flip-box__layer__inner">
+                     <h3 class="elementor-flip-box__layer__title">
+                      Luca
+                     </h3>
+                     <div class="elementor-flip-box__layer__description">
+                      All power control, stop and start in any position with head lift and tilt
+                     </div>
+                     <span class="elementor-flip-box__button elementor-button elementor-size-sm">
+                      View More
+                     </span>
+                    </div>
+                   </div>
+                  </a>
+                 </div>
+                </div>
+               </div>
+              </div>
+             </div>
+             <div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-7b845f1" data-element_type="column" data-id="7b845f1">
+              <div class="elementor-widget-wrap elementor-element-populated">
+               <div class="elementor-element elementor-element-1aa5788 elementor-flip-box--effect-slide home-flip-box animated-slow elementor-flip-box--direction-up elementor-widget elementor-widget-flip-box" data-element_type="widget" data-id="1aa5788" data-settings='{"_animation":"none"}' data-widget_type="flip-box.default">
+                <div class="elementor-widget-container">
+                 <div class="elementor-flip-box" tabindex="0">
+                  <div class="elementor-flip-box__layer elementor-flip-box__front">
+                   <div class="elementor-flip-box__layer__overlay">
+                    <div class="elementor-flip-box__layer__inner">
+                     <h3 class="elementor-flip-box__layer__title">
+                      Lift Chairs
+                     </h3>
+                    </div>
+                   </div>
+                  </div>
+                  <a class="elementor-flip-box__layer elementor-flip-box__back" href="https://www.barcalounger.com/view-all-options/langston?attribute_pa_covers=venzia-blue">
+                   <div class="elementor-flip-box__layer__overlay">
+                    <div class="elementor-flip-box__layer__inner">
+                     <h3 class="elementor-flip-box__layer__title">
+                      Langston
+                     </h3>
+                     <div class="elementor-flip-box__layer__description">
+                      LuxRecline category offers layflat, dual motors and lift if you need a little help
+                     </div>
+                     <span class="elementor-flip-box__button elementor-button elementor-size-sm">
+                      View More
+                     </span>
+                    </div>
+                   </div>
+                  </a>
+                 </div>
+                </div>
+               </div>
+              </div>
+             </div>
+            </div>
+           </section>
+           <section class="elementor-section elementor-top-section elementor-element elementor-element-be2435d elementor-section-full_width elementor-section-height-default elementor-section-height-default" data-element_type="section" data-id="be2435d" data-settings='{"background_background":"classic"}'>
+            <div class="elementor-container elementor-column-gap-default">
+             <div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-fcf5bd3" data-element_type="column" data-id="fcf5bd3">
+              <div class="elementor-widget-wrap elementor-element-populated">
+               <div class="elementor-element elementor-element-a325e54 elementor-flip-box--effect-slide home-flip-box-noback animated-slow elementor-flip-box--direction-up elementor-widget elementor-widget-flip-box" data-element_type="widget" data-id="a325e54" data-settings='{"_animation":"none"}' data-widget_type="flip-box.default">
+                <div class="elementor-widget-container">
+                 <div class="elementor-flip-box" tabindex="0">
+                  <div class="elementor-flip-box__layer elementor-flip-box__front">
+                   <div class="elementor-flip-box__layer__overlay">
+                    <div class="elementor-flip-box__layer__inner">
+                     <h3 class="elementor-flip-box__layer__title">
+                      Shop All Products
+                     </h3>
+                    </div>
+                   </div>
+                  </div>
+                  <a class="elementor-flip-box__layer elementor-flip-box__back" href="https://www.barcalounger.com/view-all-options">
+                   <div class="elementor-flip-box__layer__overlay">
+                    <div class="elementor-flip-box__layer__inner">
+                     <span class="elementor-flip-box__button elementor-button elementor-size-sm">
+                      Room Scenes
+                     </span>
+                    </div>
+                   </div>
+                  </a>
+                 </div>
+                </div>
+               </div>
+              </div>
+             </div>
+             <div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-a23751d" data-element_type="column" data-id="a23751d">
+              <div class="elementor-widget-wrap elementor-element-populated">
+               <div class="elementor-element elementor-element-dd0faa5 elementor-flip-box--effect-slide home-flip-box-noback animated-slow elementor-flip-box--direction-up elementor-widget elementor-widget-flip-box" data-element_type="widget" data-id="dd0faa5" data-settings='{"_animation":"none"}' data-widget_type="flip-box.default">
+                <div class="elementor-widget-container">
+                 <div class="elementor-flip-box" tabindex="0">
+                  <div class="elementor-flip-box__layer elementor-flip-box__front">
+                   <div class="elementor-flip-box__layer__overlay">
+                    <div class="elementor-flip-box__layer__inner">
+                     <h3 class="elementor-flip-box__layer__title">
+                      Browse Covers
+                     </h3>
+                    </div>
+                   </div>
+                  </div>
+                  <a class="elementor-flip-box__layer elementor-flip-box__back" href="https://www.barcalounger.com/covers">
+                   <div class="elementor-flip-box__layer__overlay">
+                    <div class="elementor-flip-box__layer__inner">
+                     <span class="elementor-flip-box__button elementor-button elementor-size-sm">
+                      Browse Covers
+                     </span>
+                    </div>
+                   </div>
+                  </a>
+                 </div>
+                </div>
+               </div>
+              </div>
+             </div>
+            </div>
+           </section>
+           <section class="elementor-section elementor-top-section elementor-element elementor-element-c0aa449 elementor-section-full_width elementor-section-height-default elementor-section-height-default" data-element_type="section" data-id="c0aa449">
+            <div class="elementor-container elementor-column-gap-default">
+             <div class="elementor-column elementor-col-66 elementor-top-column elementor-element elementor-element-63812a0" data-element_type="column" data-id="63812a0">
+              <div class="elementor-widget-wrap elementor-element-populated">
+               <div class="elementor-element elementor-element-ffd18bf elementor-flip-box--effect-slide home-flip-box animated-slow elementor-flip-box--direction-up elementor-widget elementor-widget-flip-box" data-element_type="widget" data-id="ffd18bf" data-settings='{"_animation":"none"}' data-widget_type="flip-box.default">
+                <div class="elementor-widget-container">
+                 <div class="elementor-flip-box" tabindex="0">
+                  <div class="elementor-flip-box__layer elementor-flip-box__front">
+                   <div class="elementor-flip-box__layer__overlay">
+                    <div class="elementor-flip-box__layer__inner">
+                     <h3 class="elementor-flip-box__layer__title">
+                      Motion Group
+                     </h3>
+                    </div>
+                   </div>
+                  </div>
+                  <a class="elementor-flip-box__layer elementor-flip-box__back" href="https://www.barcalounger.com/view-all-options/kester/">
+                   <div class="elementor-flip-box__layer__overlay">
+                    <div class="elementor-flip-box__layer__inner">
+                     <h3 class="elementor-flip-box__layer__title">
+                      Kester
+                     </h3>
+                     <div class="elementor-flip-box__layer__description">
+                      This group features box seat styled pad over chaise seating with pocketed coil springs, tucked pillow arms, and clean line pub backs
+                     </div>
+                     <span class="elementor-flip-box__button elementor-button elementor-size-sm">
+                      View More
+                     </span>
+                    </div>
+                   </div>
+                  </a>
+                 </div>
+                </div>
+               </div>
+              </div>
+             </div>
+             <div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-0a05302" data-element_type="column" data-id="0a05302">
+              <div class="elementor-widget-wrap elementor-element-populated">
+               <div class="elementor-element elementor-element-b12dac3 elementor-flip-box--effect-slide home-flip-box animated-slow elementor-flip-box--direction-up elementor-widget elementor-widget-flip-box" data-element_type="widget" data-id="b12dac3" data-settings='{"_animation":"none"}' data-widget_type="flip-box.default">
+                <div class="elementor-widget-container">
+                 <div class="elementor-flip-box" tabindex="0">
+                  <div class="elementor-flip-box__layer elementor-flip-box__front">
+                   <div class="elementor-flip-box__layer__overlay">
+                    <div class="elementor-flip-box__layer__inner">
+                     <h3 class="elementor-flip-box__layer__title">
+                      Vintage
+                     </h3>
+                    </div>
+                   </div>
+                  </div>
+                  <a class="elementor-flip-box__layer elementor-flip-box__back" href="https://www.barcalounger.com/view-all-options/conrad">
+                   <div class="elementor-flip-box__layer__overlay">
+                    <div class="elementor-flip-box__layer__inner">
+                     <h3 class="elementor-flip-box__layer__title">
+                      Conrad
+                     </h3>
+                     <div class="elementor-flip-box__layer__description">
+                      Big and Tall triple power recliner. 45” high winged pub back, pocketed coil and kneed back plushily padded arms
+                     </div>
+                     <span class="elementor-flip-box__button elementor-button elementor-size-sm">
+                      View More
+                     </span>
+                    </div>
+                   </div>
+                  </a>
+                 </div>
+                </div>
+               </div>
+              </div>
+             </div>
+            </div>
+           </section>
+           <section class="elementor-section elementor-top-section elementor-element elementor-element-1af54a0 elementor-section-full_width elementor-section-height-default elementor-section-height-default" data-element_type="section" data-id="1af54a0">
+            <div class="elementor-container elementor-column-gap-default">
+             <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-773294f" data-element_type="column" data-id="773294f">
+              <div class="elementor-widget-wrap elementor-element-populated">
+               <div class="elementor-element elementor-element-ae1e355 elementor-widget elementor-widget-image" data-element_type="widget" data-id="ae1e355" data-widget_type="image.default" id="hmpg2024-truckimg">
+                <div class="elementor-widget-container">
+                 <a href="https://www.barcalounger.com/find-a-retailer">
+                  <img alt="slider-thin (1)" class="attachment-full size-full wp-image-18370" decoding="async" fetchpriority="high" height="287" sizes="(max-width: 1200px) 100vw, 1200px" src="https://www.barcalounger.com/wp-content/uploads/2024/02/slider-thin-1-scaled.jpg" srcset="https://www.barcalounger.com/wp-content/uploads/2024/02/slider-thin-1-scaled.jpg 1200w, https://www.barcalounger.com/wp-content/uploads/2024/02/slider-thin-1-300x72.jpg 300w, https://www.barcalounger.com/wp-content/uploads/2024/02/slider-thin-1-1024x245.jpg 1024w, https://www.barcalounger.com/wp-content/uploads/2024/02/slider-thin-1-768x184.jpg 768w, https://www.barcalounger.com/wp-content/uploads/2024/02/slider-thin-1-1536x367.jpg 1536w, https://www.barcalounger.com/wp-content/uploads/2024/02/slider-thin-1-600x143.jpg 600w" title="slider-thin (1)" width="1200"/>
+                 </a>
+                </div>
+               </div>
+              </div>
+             </div>
+            </div>
+           </section>
+           <section class="elementor-section elementor-top-section elementor-element elementor-element-eaed39a elementor-section-full_width elementor-section-height-default elementor-section-height-default" data-element_type="section" data-id="eaed39a">
+            <div class="elementor-container elementor-column-gap-default">
+             <div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-a27d33e" data-element_type="column" data-id="a27d33e">
+              <div class="elementor-widget-wrap elementor-element-populated">
+               <div class="elementor-element elementor-element-b517c07 elementor-flip-box--effect-slide home-flip-box animated-slow elementor-flip-box--direction-up elementor-widget elementor-widget-flip-box" data-element_type="widget" data-id="b517c07" data-settings='{"_animation":"none"}' data-widget_type="flip-box.default">
+                <div class="elementor-widget-container">
+                 <div class="elementor-flip-box" tabindex="0">
+                  <div class="elementor-flip-box__layer elementor-flip-box__front">
+                   <div class="elementor-flip-box__layer__overlay">
+                    <div class="elementor-flip-box__layer__inner">
+                     <h3 class="elementor-flip-box__layer__title">
+                      Modern Expressions
+                     </h3>
+                    </div>
+                   </div>
+                  </div>
+                  <a class="elementor-flip-box__layer elementor-flip-box__back" href="https://www.barcalounger.com/view-all-options/harlee?attribute_pa_covers=troy-cream">
+                   <div class="elementor-flip-box__layer__overlay">
+                    <div class="elementor-flip-box__layer__inner">
+                     <h3 class="elementor-flip-box__layer__title">
+                      Harlee Manual Recline
+                     </h3>
+                     <div class="elementor-flip-box__layer__description">
+                      Contemporary open arm design, 360-degree swivel glider recliner with handle activated recline. Split pub back, boxed style pad over chaise seating with pocketed coil springs, plushily padded radius track arms, and single needle top stitch detail.
+                     </div>
+                     <span class="elementor-flip-box__button elementor-button elementor-size-sm">
+                      View More
+                     </span>
+                    </div>
+                   </div>
+                  </a>
+                 </div>
+                </div>
+               </div>
+              </div>
+             </div>
+             <div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-87c8a5f" data-element_type="column" data-id="87c8a5f">
+              <div class="elementor-widget-wrap elementor-element-populated">
+               <div class="elementor-element elementor-element-f456bce elementor-flip-box--effect-slide home-flip-box animated-slow elementor-flip-box--direction-up elementor-widget elementor-widget-flip-box" data-element_type="widget" data-id="f456bce" data-settings='{"_animation":"none"}' data-widget_type="flip-box.default">
+                <div class="elementor-widget-container">
+                 <div class="elementor-flip-box" tabindex="0">
+                  <div class="elementor-flip-box__layer elementor-flip-box__front">
+                   <div class="elementor-flip-box__layer__overlay">
+                    <div class="elementor-flip-box__layer__inner">
+                     <h3 class="elementor-flip-box__layer__title">
+                      Kid's Recliners
+                     </h3>
+                    </div>
+                   </div>
+                  </div>
+                  <a class="elementor-flip-box__layer elementor-flip-box__back" href="https://www.barcalounger.com/view-all-options/ewing?attribute_pa_covers=ellen-lividity">
+                   <div class="elementor-flip-box__layer__overlay">
+                    <div class="elementor-flip-box__layer__inner">
+                     <h3 class="elementor-flip-box__layer__title">
+                      Ewing
+                     </h3>
+                     <div class="elementor-flip-box__layer__description">
+                      Kid’s sized recliner provides an easy to operate push thru the arm reclining mechanism. Perfect kid’s chair for watching TV, gaming or just relaxing
+                     </div>
+                     <span class="elementor-flip-box__button elementor-button elementor-size-sm">
+                      View More
+                     </span>
+                    </div>
+                   </div>
+                  </a>
+                 </div>
+                </div>
+               </div>
+              </div>
+             </div>
+             <div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-e053488" data-element_type="column" data-id="e053488">
+              <div class="elementor-widget-wrap elementor-element-populated">
+               <div class="elementor-element elementor-element-bf71e0a elementor-flip-box--effect-slide home-flip-box animated-slow elementor-flip-box--direction-up elementor-widget elementor-widget-flip-box" data-element_type="widget" data-id="bf71e0a" data-settings='{"_animation":"none"}' data-widget_type="flip-box.default">
+                <div class="elementor-widget-container">
+                 <div class="elementor-flip-box" tabindex="0">
+                  <div class="elementor-flip-box__layer elementor-flip-box__front">
+                   <div class="elementor-flip-box__layer__overlay">
+                    <div class="elementor-flip-box__layer__inner">
+                     <h3 class="elementor-flip-box__layer__title">
+                      Vintage
+                     </h3>
+                    </div>
+                   </div>
+                  </div>
+                  <a class="elementor-flip-box__layer elementor-flip-box__back" href="https://www.barcalounger.com/view-all-options/thornfield?attribute_pa_covers=shoreham-blue">
+                   <div class="elementor-flip-box__layer__overlay">
+                    <div class="elementor-flip-box__layer__inner">
+                     <h3 class="elementor-flip-box__layer__title">
+                      Thornfield
+                     </h3>
+                     <div class="elementor-flip-box__layer__description">
+                      Classic wing back lounge chair recliner with 3-way push thru the arms mechanism and footrest extension
+                     </div>
+                     <span class="elementor-flip-box__button elementor-button elementor-size-sm">
+                      View More
+                     </span>
+                    </div>
+                   </div>
+                  </a>
+                 </div>
+                </div>
+               </div>
+              </div>
+             </div>
+            </div>
+           </section>
+           <section class="elementor-section elementor-top-section elementor-element elementor-element-4e49dec elementor-section-full_width elementor-section-height-default elementor-section-height-default" data-element_type="section" data-id="4e49dec">
+            <div class="elementor-container elementor-column-gap-default">
+             <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-360d3dc" data-element_type="column" data-id="360d3dc">
+              <div class="elementor-widget-wrap elementor-element-populated">
+               <div class="elementor-element elementor-element-78ceb6e elementor-flip-box--effect-slide home-flip-box animated-slow elementor-flip-box--direction-up elementor-widget elementor-widget-flip-box" data-element_type="widget" data-id="78ceb6e" data-settings='{"_animation":"none"}' data-widget_type="flip-box.default">
+                <div class="elementor-widget-container">
+                 <div class="elementor-flip-box" tabindex="0">
+                  <div class="elementor-flip-box__layer elementor-flip-box__front">
+                   <div class="elementor-flip-box__layer__overlay">
+                    <div class="elementor-flip-box__layer__inner">
+                     <h3 class="elementor-flip-box__layer__title">
+                      Media Collection
+                     </h3>
+                    </div>
+                   </div>
+                  </div>
+                  <a class="elementor-flip-box__layer elementor-flip-box__back" href="https://www.barcalounger.com/view-all-options/glenwood?attribute_pa_covers=rainer-steel&amp;attribute_pa_seating=sofa">
+                   <div class="elementor-flip-box__layer__overlay">
+                    <div class="elementor-flip-box__layer__inner">
+                     <h3 class="elementor-flip-box__layer__title">
+                      Glenwood
+                     </h3>
+                     <div class="elementor-flip-box__layer__description">
+                      Larger scale power headrest, power lumbar, power recline, lay flat mechanisms and 3” footrest extension
+                     </div>
+                     <span class="elementor-flip-box__button elementor-button elementor-size-sm">
+                      View More
+                     </span>
+                    </div>
+                   </div>
+                  </a>
+                 </div>
+                </div>
+               </div>
+              </div>
+             </div>
+            </div>
+           </section>
+           <section class="elementor-section elementor-top-section elementor-element elementor-element-435dd2b elementor-section-full_width elementor-section-height-default elementor-section-height-default" data-element_type="section" data-id="435dd2b">
+            <div class="elementor-container elementor-column-gap-default">
+             <div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-7927e43" data-element_type="column" data-id="7927e43">
+              <div class="elementor-widget-wrap elementor-element-populated">
+               <div class="elementor-element elementor-element-f522fdc elementor-flip-box--effect-slide home-flip-box animated-slow elementor-flip-box--direction-up elementor-widget elementor-widget-flip-box" data-element_type="widget" data-id="f522fdc" data-settings='{"_animation":"none"}' data-widget_type="flip-box.default">
+                <div class="elementor-widget-container">
+                 <div class="elementor-flip-box" tabindex="0">
+                  <div class="elementor-flip-box__layer elementor-flip-box__front">
+                   <div class="elementor-flip-box__layer__overlay">
+                    <div class="elementor-flip-box__layer__inner">
+                     <h3 class="elementor-flip-box__layer__title">
+                      Lux Recline and Lift
+                     </h3>
+                    </div>
+                   </div>
+                  </div>
+                  <a class="elementor-flip-box__layer elementor-flip-box__back" href="https://www.barcalounger.com/view-all-options/louisville?attribute_pa_covers=rainer-ocean">
+                   <div class="elementor-flip-box__layer__overlay">
+                    <div class="elementor-flip-box__layer__inner">
+                     <h3 class="elementor-flip-box__layer__title">
+                      Louisville
+                     </h3>
+                     <div class="elementor-flip-box__layer__description">
+                      Dual Motor, Zero Gravity, Power Lay Flat Lift chair recliner with power recline, power headrest, power lumbar, and zoned heat in back, seat, and footrest
+                     </div>
+                     <span class="elementor-flip-box__button elementor-button elementor-size-sm">
+                      View More
+                     </span>
+                    </div>
+                   </div>
+                  </a>
+                 </div>
+                </div>
+               </div>
+              </div>
+             </div>
+             <div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-a15d2e8" data-element_type="column" data-id="a15d2e8">
+              <div class="elementor-widget-wrap elementor-element-populated">
+               <div class="elementor-element elementor-element-c76d9d5 elementor-flip-box--effect-slide home-flip-box animated-slow elementor-flip-box--direction-up elementor-widget elementor-widget-flip-box" data-element_type="widget" data-id="c76d9d5" data-settings='{"_animation":"none"}' data-widget_type="flip-box.default">
+                <div class="elementor-widget-container">
+                 <div class="elementor-flip-box" tabindex="0">
+                  <div class="elementor-flip-box__layer elementor-flip-box__front">
+                   <div class="elementor-flip-box__layer__overlay">
+                    <div class="elementor-flip-box__layer__inner">
+                     <h3 class="elementor-flip-box__layer__title">
+                      Pedestal Chair and Ottoman
+                     </h3>
+                    </div>
+                   </div>
+                  </div>
+                  <a class="elementor-flip-box__layer elementor-flip-box__back" href="https://www.barcalounger.com/view-all-options/jacque?attribute_pa_covers=roman-tan">
+                   <div class="elementor-flip-box__layer__overlay">
+                    <div class="elementor-flip-box__layer__inner">
+                     <h3 class="elementor-flip-box__layer__title">
+                      Jacque Pedestal
+                     </h3>
+                     <div class="elementor-flip-box__layer__description">
+                      Baseball mitt back design with articulated headrest area, thick plush arms, pocketed coil seats and angled ottoman provides superior leg support. Top grain leather on all seating surfaces. Heavy duty wood base finished in a beautiful Cappuccino finish.
+
+$1,245 MSRP
+                     </div>
+                     <span class="elementor-flip-box__button elementor-button elementor-size-sm">
+                      View More
+                     </span>
+                    </div>
+                   </div>
+                  </a>
+                 </div>
+                </div>
+               </div>
+              </div>
+             </div>
+             <div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-28aa635" data-element_type="column" data-id="28aa635">
+              <div class="elementor-widget-wrap elementor-element-populated">
+               <div class="elementor-element elementor-element-07204dc elementor-flip-box--effect-slide home-flip-box animated-slow elementor-flip-box--direction-up elementor-widget elementor-widget-flip-box" data-element_type="widget" data-id="07204dc" data-settings='{"_animation":"none"}' data-widget_type="flip-box.default">
+                <div class="elementor-widget-container">
+                 <div class="elementor-flip-box" tabindex="0">
+                  <div class="elementor-flip-box__layer elementor-flip-box__front">
+                   <div class="elementor-flip-box__layer__overlay">
+                    <div class="elementor-flip-box__layer__inner">
+                     <h3 class="elementor-flip-box__layer__title">
+                      Woodlands
+                     </h3>
+                    </div>
+                   </div>
+                  </div>
+                  <a class="elementor-flip-box__layer elementor-flip-box__back" href="https://www.barcalounger.com/view-all-options/hampton?attribute_pa_covers=colchester-bitters">
+                   <div class="elementor-flip-box__layer__overlay">
+                    <div class="elementor-flip-box__layer__inner">
+                     <h3 class="elementor-flip-box__layer__title">
+                      Hampton
+                     </h3>
+                     <div class="elementor-flip-box__layer__description">
+                      Mid-Century Modern, exposed wood frame push thru the arm 3-way recliner featuring a bull nose seat cushion with pocketed coil springs, high pub back
+                     </div>
+                     <span class="elementor-flip-box__button elementor-button elementor-size-sm">
+                      View More
+                     </span>
+                    </div>
+                   </div>
+                  </a>
+                 </div>
+                </div>
+               </div>
+              </div>
+             </div>
+            </div>
+           </section>
+           <section class="elementor-section elementor-top-section elementor-element elementor-element-3430b82 elementor-section-full_width elementor-section-height-default elementor-section-height-default" data-element_type="section" data-id="3430b82">
+            <div class="elementor-container elementor-column-gap-default">
+             <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-34dce91" data-element_type="column" data-id="34dce91">
+              <div class="elementor-widget-wrap elementor-element-populated">
+               <div class="elementor-element elementor-element-6369e03 elementor-flip-box--effect-slide home-flip-box animated-slow elementor-flip-box--direction-up elementor-widget elementor-widget-flip-box" data-element_type="widget" data-id="6369e03" data-settings='{"_animation":"none"}' data-widget_type="flip-box.default">
+                <div class="elementor-widget-container">
+                 <div class="elementor-flip-box" tabindex="0">
+                  <div class="elementor-flip-box__layer elementor-flip-box__front">
+                   <div class="elementor-flip-box__layer__overlay">
+                    <div class="elementor-flip-box__layer__inner">
+                     <h3 class="elementor-flip-box__layer__title">
+                      Motion Groups
+                     </h3>
+                    </div>
+                   </div>
+                  </div>
+                  <a class="elementor-flip-box__layer elementor-flip-box__back" href="https://www.barcalounger.com/motion-groups">
+                   <div class="elementor-flip-box__layer__overlay">
+                    <div class="elementor-flip-box__layer__inner">
+                     <h3 class="elementor-flip-box__layer__title">
+                      Chapel Hill Power Recline
+                     </h3>
+                     <div class="elementor-flip-box__layer__description">
+                      Classic traditional power reclining group.  The collection features plush pillow backs, sloped arms, box styled pad over chaise pocket coil spring seating which
+                      <br/>
+                      fully support your legs by eliminating the pressure points, welt detail,  nail head trim, outside the arm controllers with USB ports A &amp; C, and wood legs.
+                     </div>
+                     <span class="elementor-flip-box__button elementor-button elementor-size-sm">
+                      Explore Motion Groups
+                     </span>
+                    </div>
+                   </div>
+                  </a>
+                 </div>
+                </div>
+               </div>
+              </div>
+             </div>
+            </div>
+           </section>
+           <section class="elementor-section elementor-top-section elementor-element elementor-element-598cdb1 elementor-section-full_width elementor-section-height-default elementor-section-height-default" data-element_type="section" data-id="598cdb1">
+            <div class="elementor-container elementor-column-gap-default">
+             <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-76a9229" data-element_type="column" data-id="76a9229">
+              <div class="elementor-widget-wrap elementor-element-populated">
+               <div class="elementor-element elementor-element-3b4e266 elementor-widget-divider--view-line elementor-widget elementor-widget-divider" data-element_type="widget" data-id="3b4e266" data-widget_type="divider.default">
+                <div class="elementor-widget-container">
+                 <div class="elementor-divider">
+                  <span class="elementor-divider-separator">
+                  </span>
+                 </div>
+                </div>
+               </div>
+              </div>
+             </div>
+            </div>
+           </section>
+           <section class="elementor-section elementor-top-section elementor-element elementor-element-baeb622 elementor-section-full_width elementor-section-height-default elementor-section-height-default" data-element_type="section" data-id="baeb622">
+            <div class="elementor-container elementor-column-gap-default">
+             <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-31e50e3" data-element_type="column" data-id="31e50e3">
+              <div class="elementor-widget-wrap elementor-element-populated">
+               <div class="elementor-element elementor-element-ea9eed8 elementor-widget elementor-widget-shortcode" data-element_type="widget" data-id="ea9eed8" data-widget_type="shortcode.default">
+                <div class="elementor-widget-container">
+                 <div class="elementor-shortcode">
+                  <div class="sbi sbi_mob_col_1 sbi_tab_col_2 sbi_col_5 sbi_width_resp sbi_palette_custom_1" data-cols="5" data-colsmobile="1" data-colstablet="2" data-feedid="*1" data-item-padding="5" data-locatornonce="d5d371ea62" data-num="5" data-nummobile="4" data-postid="17890" data-res="auto" data-sbi-flags="favorLocal" data-shortcode-atts='{"feed":"1"}' id="sb_instagram" style="padding-bottom: 10px;">
+                   <div class="sb_instagram_header sbi_header_palette_custom_1">
+                    <a class="sbi_header_link" href="https://www.instagram.com/barcalounger/" rel="nofollow noopener" target="_blank" title="@barcalounger">
+                     <div class="sbi_header_text">
+                      <div class="sbi_header_img" data-avatar-url="https://scontent-iad3-1.xx.fbcdn.net/v/t51.2885-15/448142455_963809482204834_9044786054955151983_n.jpg?_nc_cat=108&amp;ccb=1-7&amp;_nc_sid=7d201b&amp;_nc_ohc=5YEqnfOeTNkQ7kNvgEpxGp4&amp;_nc_zt=23&amp;_nc_ht=scontent-iad3-1.xx&amp;edm=AL-3X8kEAAAA&amp;oh=00_AYBgBSjVZbz0qWgFahjCjfBTQcNo7oeyZVSO7apmu12iHg&amp;oe=67AD7DDD">
+                       <div class="sbi_header_img_hover">
+                        <svg aria-hidden="true" aria-label="Instagram" class="sbi_new_logo fa-instagram fa-w-14" data-fa-processed="" data-icon="instagram" data-prefix="fab" role="img" viewbox="0 0 448 512">
+                         <path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z" fill="currentColor">
+                         </path>
+                        </svg>
+                       </div>
+                       <img alt="BarcaLounger Furniture" decoding="async" height="50" src="https://www.barcalounger.com/wp-content/uploads/sb-instagram-feed-images/barcalounger.webp" width="50"/>
+                      </div>
+                      <div class="sbi_feedtheme_header_text">
+                       <h3 style="color: rgb(2,2,2);">
+                        barcalounger
+                       </h3>
+                       <p class="sbi_bio" style="color: rgb(2,2,2);">
+                        Find Us On Instagram
+                       </p>
+                      </div>
+                     </div>
+                    </a>
+                   </div>
+                   <div id="sbi_images" style="gap: 10px;">
+                    <div class="sbi_item sbi_type_video sbi_new sbi_transition" data-date="1735129800" id="sbi_18056459200767955">
+                     <div class="sbi_photo_wrap">
+                      <a class="sbi_photo" data-full-res="https://scontent-iad3-1.cdninstagram.com/v/t51.75761-15/469719328_18270919720247258_6816159366294064624_n.jpg?stp=dst-jpg_e35_tt6&amp;_nc_cat=102&amp;ccb=1-7&amp;_nc_sid=18de74&amp;_nc_ohc=bYNojx77VZEQ7kNvgEG2AAs&amp;_nc_zt=23&amp;_nc_ht=scontent-iad3-1.cdninstagram.com&amp;edm=AM6HXa8EAAAA&amp;_nc_gid=A9xgGR2VJXaaTAEsPLD-A2U&amp;oh=00_AYCLd3OtBVCqYpndiqCatyzWpQhF8_BxZfPUnwvdZ7dXTw&amp;oe=67AD8F05" data-img-src-set='{"d":"https:\/\/scontent-iad3-1.cdninstagram.com\/v\/t51.75761-15\/469719328_18270919720247258_6816159366294064624_n.jpg?stp=dst-jpg_e35_tt6&amp;_nc_cat=102&amp;ccb=1-7&amp;_nc_sid=18de74&amp;_nc_ohc=bYNojx77VZEQ7kNvgEG2AAs&amp;_nc_zt=23&amp;_nc_ht=scontent-iad3-1.cdninstagram.com&amp;edm=AM6HXa8EAAAA&amp;_nc_gid=A9xgGR2VJXaaTAEsPLD-A2U&amp;oh=00_AYCLd3OtBVCqYpndiqCatyzWpQhF8_BxZfPUnwvdZ7dXTw&amp;oe=67AD8F05","150":"https:\/\/scontent-iad3-1.cdninstagram.com\/v\/t51.75761-15\/469719328_18270919720247258_6816159366294064624_n.jpg?stp=dst-jpg_e35_tt6&amp;_nc_cat=102&amp;ccb=1-7&amp;_nc_sid=18de74&amp;_nc_ohc=bYNojx77VZEQ7kNvgEG2AAs&amp;_nc_zt=23&amp;_nc_ht=scontent-iad3-1.cdninstagram.com&amp;edm=AM6HXa8EAAAA&amp;_nc_gid=A9xgGR2VJXaaTAEsPLD-A2U&amp;oh=00_AYCLd3OtBVCqYpndiqCatyzWpQhF8_BxZfPUnwvdZ7dXTw&amp;oe=67AD8F05","320":"https:\/\/scontent-iad3-1.cdninstagram.com\/v\/t51.75761-15\/469719328_18270919720247258_6816159366294064624_n.jpg?stp=dst-jpg_e35_tt6&amp;_nc_cat=102&amp;ccb=1-7&amp;_nc_sid=18de74&amp;_nc_ohc=bYNojx77VZEQ7kNvgEG2AAs&amp;_nc_zt=23&amp;_nc_ht=scontent-iad3-1.cdninstagram.com&amp;edm=AM6HXa8EAAAA&amp;_nc_gid=A9xgGR2VJXaaTAEsPLD-A2U&amp;oh=00_AYCLd3OtBVCqYpndiqCatyzWpQhF8_BxZfPUnwvdZ7dXTw&amp;oe=67AD8F05","640":"https:\/\/scontent-iad3-1.cdninstagram.com\/v\/t51.75761-15\/469719328_18270919720247258_6816159366294064624_n.jpg?stp=dst-jpg_e35_tt6&amp;_nc_cat=102&amp;ccb=1-7&amp;_nc_sid=18de74&amp;_nc_ohc=bYNojx77VZEQ7kNvgEG2AAs&amp;_nc_zt=23&amp;_nc_ht=scontent-iad3-1.cdninstagram.com&amp;edm=AM6HXa8EAAAA&amp;_nc_gid=A9xgGR2VJXaaTAEsPLD-A2U&amp;oh=00_AYCLd3OtBVCqYpndiqCatyzWpQhF8_BxZfPUnwvdZ7dXTw&amp;oe=67AD8F05"}' href="https://www.instagram.com/reel/DEAFuL5swmi/" rel="noopener nofollow" target="_blank">
+                       <span class="sbi-screenreader">
+                        Wishing you Happy Holidays and a Prosperous New Ye
+                       </span>
+                       <svg aria-hidden="true" aria-label="Play" class="svg-inline--fa fa-play fa-w-14 sbi_playbtn" data-fa-processed="" data-icon="play" data-prefix="fa" role="presentation" style="color: rgba(255,255,255,1)" viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M424.4 214.7L72.4 6.6C43.8-10.3 0 6.1 0 47.9V464c0 37.5 40.7 60.1 72.4 41.3l352-208c31.4-18.5 31.5-64.1 0-82.6z" fill="currentColor">
+                        </path>
+                       </svg>
+                       <img alt="Wishing you Happy Holidays and a Prosperous New Year from all of us at Barcalounger! ✨ May your holiday season be filled with joy, relaxation, and the cozy comfort of home. Here’s to a bright and wonderful year ahead! 🌟
+#HappyHolidays #HappyNewYear #BarcaloungerComfort #Barcalounger #EnjoyLifesMoments" decoding="async" src="https://www.barcalounger.com/wp-content/plugins/instagram-feed/img/placeholder.png"/>
+                      </a>
+                     </div>
+                    </div>
+                    <div class="sbi_item sbi_type_video sbi_new sbi_transition" data-date="1734021600" id="sbi_18062011192830195">
+                     <div class="sbi_photo_wrap">
+                      <a class="sbi_photo" data-full-res="https://scontent-iad3-1.cdninstagram.com/v/t51.75761-15/469443047_18271023646247258_324123704930127773_n.jpg?stp=dst-jpg_e35_tt6&amp;_nc_cat=102&amp;ccb=1-7&amp;_nc_sid=18de74&amp;_nc_ohc=w9KmpwpyWAcQ7kNvgHM90Uh&amp;_nc_zt=23&amp;_nc_ht=scontent-iad3-1.cdninstagram.com&amp;edm=AM6HXa8EAAAA&amp;_nc_gid=A9xgGR2VJXaaTAEsPLD-A2U&amp;oh=00_AYDfxjX9GrdoxeOO1S3uIFqxCH9SShx0_cd2OFAcmBEL2g&amp;oe=67AD967C" data-img-src-set='{"d":"https:\/\/scontent-iad3-1.cdninstagram.com\/v\/t51.75761-15\/469443047_18271023646247258_324123704930127773_n.jpg?stp=dst-jpg_e35_tt6&amp;_nc_cat=102&amp;ccb=1-7&amp;_nc_sid=18de74&amp;_nc_ohc=w9KmpwpyWAcQ7kNvgHM90Uh&amp;_nc_zt=23&amp;_nc_ht=scontent-iad3-1.cdninstagram.com&amp;edm=AM6HXa8EAAAA&amp;_nc_gid=A9xgGR2VJXaaTAEsPLD-A2U&amp;oh=00_AYDfxjX9GrdoxeOO1S3uIFqxCH9SShx0_cd2OFAcmBEL2g&amp;oe=67AD967C","150":"https:\/\/scontent-iad3-1.cdninstagram.com\/v\/t51.75761-15\/469443047_18271023646247258_324123704930127773_n.jpg?stp=dst-jpg_e35_tt6&amp;_nc_cat=102&amp;ccb=1-7&amp;_nc_sid=18de74&amp;_nc_ohc=w9KmpwpyWAcQ7kNvgHM90Uh&amp;_nc_zt=23&amp;_nc_ht=scontent-iad3-1.cdninstagram.com&amp;edm=AM6HXa8EAAAA&amp;_nc_gid=A9xgGR2VJXaaTAEsPLD-A2U&amp;oh=00_AYDfxjX9GrdoxeOO1S3uIFqxCH9SShx0_cd2OFAcmBEL2g&amp;oe=67AD967C","320":"https:\/\/scontent-iad3-1.cdninstagram.com\/v\/t51.75761-15\/469443047_18271023646247258_324123704930127773_n.jpg?stp=dst-jpg_e35_tt6&amp;_nc_cat=102&amp;ccb=1-7&amp;_nc_sid=18de74&amp;_nc_ohc=w9KmpwpyWAcQ7kNvgHM90Uh&amp;_nc_zt=23&amp;_nc_ht=scontent-iad3-1.cdninstagram.com&amp;edm=AM6HXa8EAAAA&amp;_nc_gid=A9xgGR2VJXaaTAEsPLD-A2U&amp;oh=00_AYDfxjX9GrdoxeOO1S3uIFqxCH9SShx0_cd2OFAcmBEL2g&amp;oe=67AD967C","640":"https:\/\/scontent-iad3-1.cdninstagram.com\/v\/t51.75761-15\/469443047_18271023646247258_324123704930127773_n.jpg?stp=dst-jpg_e35_tt6&amp;_nc_cat=102&amp;ccb=1-7&amp;_nc_sid=18de74&amp;_nc_ohc=w9KmpwpyWAcQ7kNvgHM90Uh&amp;_nc_zt=23&amp;_nc_ht=scontent-iad3-1.cdninstagram.com&amp;edm=AM6HXa8EAAAA&amp;_nc_gid=A9xgGR2VJXaaTAEsPLD-A2U&amp;oh=00_AYDfxjX9GrdoxeOO1S3uIFqxCH9SShx0_cd2OFAcmBEL2g&amp;oe=67AD967C"}' href="https://www.instagram.com/reel/DDfD_BcJMp3/" rel="noopener nofollow" target="_blank">
+                       <span class="sbi-screenreader">
+                        Upgrade your living room with the most advanced tr
+                       </span>
+                       <svg aria-hidden="true" aria-label="Play" class="svg-inline--fa fa-play fa-w-14 sbi_playbtn" data-fa-processed="" data-icon="play" data-prefix="fa" role="presentation" style="color: rgba(255,255,255,1)" viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M424.4 214.7L72.4 6.6C43.8-10.3 0 6.1 0 47.9V464c0 37.5 40.7 60.1 72.4 41.3l352-208c31.4-18.5 31.5-64.1 0-82.6z" fill="currentColor">
+                        </path>
+                       </svg>
+                       <img alt="Upgrade your living room with the most advanced triple power reclining sofa, loaded with features to maximize your relaxation:
+🔹 2-motor power recline for perfect comfort
+🔹 Power headrest &amp; lumbar support for personalized seating
+🔹 Bluetooth, AUX, USB MP3 player for endless entertainment
+🔹 Wireless charging &amp; USB ports (Types A &amp; C) to keep your devices ready
+🔹 LED base lighting for a sleek, modern vibe
+🔹 Built-in cup holders for ultimate convenience
+🔹 30-minute massage &amp; soothing heat to melt your stress away
+🔹 Drop-down iTable to control all features with ease
+With plush pub back support, pad-over-chaise seating, and deep storage arms, this sofa offers everything you need—including holders for snacks and iPad/iPhone. Plus, low-profile wood legs for that stylish finish.
+Your living room deserves this next-level comfort! 🙌 #SmartSofa #ReclinerSofa #TechLounge #UltimateRelaxation #SofaGoals #ModernComfort ✨ #Barcalounger #ComfortMeetsLuxury #RecliningStyle #HomeDesign #modernhome #ModernLiving #UltimateComfort #LuxuryLiving #InnovativeFurniture #EnjoyLifesMoments #InteriorDesign #HomeComfort #ModernFurniture #Comfort #Relaxation #Recliner #HomeDecor #FurnitureUpgrade #LeatherRecliner #leathersofa" decoding="async" src="https://www.barcalounger.com/wp-content/plugins/instagram-feed/img/placeholder.png"/>
+                      </a>
+                     </div>
+                    </div>
+                    <div class="sbi_item sbi_type_image sbi_new sbi_transition" data-date="1732796700" id="sbi_17913334839041037">
+                     <div class="sbi_photo_wrap">
+                      <a class="sbi_photo" data-full-res="https://scontent-iad3-1.cdninstagram.com/v/t51.29350-15/468542623_1286079146073830_2027282489972617557_n.jpg?stp=dst-jpg_e35_tt6&amp;_nc_cat=102&amp;ccb=1-7&amp;_nc_sid=18de74&amp;_nc_ohc=GJxPzOLdwT0Q7kNvgF1DmFM&amp;_nc_zt=23&amp;_nc_ht=scontent-iad3-1.cdninstagram.com&amp;edm=AM6HXa8EAAAA&amp;_nc_gid=A9xgGR2VJXaaTAEsPLD-A2U&amp;oh=00_AYArCDUvIHC3nQCh4i6VYNjcLYJmkigeAiQqDGPEYMYmug&amp;oe=67AD85FA" data-img-src-set='{"d":"https:\/\/scontent-iad3-1.cdninstagram.com\/v\/t51.29350-15\/468542623_1286079146073830_2027282489972617557_n.jpg?stp=dst-jpg_e35_tt6&amp;_nc_cat=102&amp;ccb=1-7&amp;_nc_sid=18de74&amp;_nc_ohc=GJxPzOLdwT0Q7kNvgF1DmFM&amp;_nc_zt=23&amp;_nc_ht=scontent-iad3-1.cdninstagram.com&amp;edm=AM6HXa8EAAAA&amp;_nc_gid=A9xgGR2VJXaaTAEsPLD-A2U&amp;oh=00_AYArCDUvIHC3nQCh4i6VYNjcLYJmkigeAiQqDGPEYMYmug&amp;oe=67AD85FA","150":"https:\/\/scontent-iad3-1.cdninstagram.com\/v\/t51.29350-15\/468542623_1286079146073830_2027282489972617557_n.jpg?stp=dst-jpg_e35_tt6&amp;_nc_cat=102&amp;ccb=1-7&amp;_nc_sid=18de74&amp;_nc_ohc=GJxPzOLdwT0Q7kNvgF1DmFM&amp;_nc_zt=23&amp;_nc_ht=scontent-iad3-1.cdninstagram.com&amp;edm=AM6HXa8EAAAA&amp;_nc_gid=A9xgGR2VJXaaTAEsPLD-A2U&amp;oh=00_AYArCDUvIHC3nQCh4i6VYNjcLYJmkigeAiQqDGPEYMYmug&amp;oe=67AD85FA","320":"https:\/\/scontent-iad3-1.cdninstagram.com\/v\/t51.29350-15\/468542623_1286079146073830_2027282489972617557_n.jpg?stp=dst-jpg_e35_tt6&amp;_nc_cat=102&amp;ccb=1-7&amp;_nc_sid=18de74&amp;_nc_ohc=GJxPzOLdwT0Q7kNvgF1DmFM&amp;_nc_zt=23&amp;_nc_ht=scontent-iad3-1.cdninstagram.com&amp;edm=AM6HXa8EAAAA&amp;_nc_gid=A9xgGR2VJXaaTAEsPLD-A2U&amp;oh=00_AYArCDUvIHC3nQCh4i6VYNjcLYJmkigeAiQqDGPEYMYmug&amp;oe=67AD85FA","640":"https:\/\/scontent-iad3-1.cdninstagram.com\/v\/t51.29350-15\/468542623_1286079146073830_2027282489972617557_n.jpg?stp=dst-jpg_e35_tt6&amp;_nc_cat=102&amp;ccb=1-7&amp;_nc_sid=18de74&amp;_nc_ohc=GJxPzOLdwT0Q7kNvgF1DmFM&amp;_nc_zt=23&amp;_nc_ht=scontent-iad3-1.cdninstagram.com&amp;edm=AM6HXa8EAAAA&amp;_nc_gid=A9xgGR2VJXaaTAEsPLD-A2U&amp;oh=00_AYArCDUvIHC3nQCh4i6VYNjcLYJmkigeAiQqDGPEYMYmug&amp;oe=67AD85FA"}' href="https://www.instagram.com/p/DC6juyPs6MJ/" rel="noopener nofollow" target="_blank">
+                       <span class="sbi-screenreader">
+                        🦃✨ This Thanksgiving, we’re grateful for co
+                       </span>
+                       <img alt="🦃✨ This Thanksgiving, we’re grateful for comfort, family, and the moments that bring us together. Whether it’s gathering around the table or relaxing in your favorite Barcalounger, we hope your holiday is filled with warmth and joy. 🍂🍁
+Happy Thanksgiving from our family to yours! #Thanksgiving #Gratitude #Barcalounger #EnjoyLifesMoments" decoding="async" src="https://www.barcalounger.com/wp-content/plugins/instagram-feed/img/placeholder.png"/>
+                      </a>
+                     </div>
+                    </div>
+                    <div class="sbi_item sbi_type_video sbi_new sbi_transition" data-date="1731501491" id="sbi_17985962504746215">
+                     <div class="sbi_photo_wrap">
+                      <a class="sbi_photo" data-full-res="https://scontent-iad3-2.cdninstagram.com/v/t51.29350-15/466381003_2897694850396998_3873410987975595510_n.jpg?stp=dst-jpg_e35_tt6&amp;_nc_cat=100&amp;ccb=1-7&amp;_nc_sid=18de74&amp;_nc_ohc=SYuZb18BdIgQ7kNvgGmX8qF&amp;_nc_zt=23&amp;_nc_ht=scontent-iad3-2.cdninstagram.com&amp;edm=AM6HXa8EAAAA&amp;_nc_gid=A9xgGR2VJXaaTAEsPLD-A2U&amp;oh=00_AYDkDYOhe0K19t-HNOVcasvAsagt3PjR4m1Esce2WKVV3Q&amp;oe=67ADA93E" data-img-src-set='{"d":"https:\/\/scontent-iad3-2.cdninstagram.com\/v\/t51.29350-15\/466381003_2897694850396998_3873410987975595510_n.jpg?stp=dst-jpg_e35_tt6&amp;_nc_cat=100&amp;ccb=1-7&amp;_nc_sid=18de74&amp;_nc_ohc=SYuZb18BdIgQ7kNvgGmX8qF&amp;_nc_zt=23&amp;_nc_ht=scontent-iad3-2.cdninstagram.com&amp;edm=AM6HXa8EAAAA&amp;_nc_gid=A9xgGR2VJXaaTAEsPLD-A2U&amp;oh=00_AYDkDYOhe0K19t-HNOVcasvAsagt3PjR4m1Esce2WKVV3Q&amp;oe=67ADA93E","150":"https:\/\/scontent-iad3-2.cdninstagram.com\/v\/t51.29350-15\/466381003_2897694850396998_3873410987975595510_n.jpg?stp=dst-jpg_e35_tt6&amp;_nc_cat=100&amp;ccb=1-7&amp;_nc_sid=18de74&amp;_nc_ohc=SYuZb18BdIgQ7kNvgGmX8qF&amp;_nc_zt=23&amp;_nc_ht=scontent-iad3-2.cdninstagram.com&amp;edm=AM6HXa8EAAAA&amp;_nc_gid=A9xgGR2VJXaaTAEsPLD-A2U&amp;oh=00_AYDkDYOhe0K19t-HNOVcasvAsagt3PjR4m1Esce2WKVV3Q&amp;oe=67ADA93E","320":"https:\/\/scontent-iad3-2.cdninstagram.com\/v\/t51.29350-15\/466381003_2897694850396998_3873410987975595510_n.jpg?stp=dst-jpg_e35_tt6&amp;_nc_cat=100&amp;ccb=1-7&amp;_nc_sid=18de74&amp;_nc_ohc=SYuZb18BdIgQ7kNvgGmX8qF&amp;_nc_zt=23&amp;_nc_ht=scontent-iad3-2.cdninstagram.com&amp;edm=AM6HXa8EAAAA&amp;_nc_gid=A9xgGR2VJXaaTAEsPLD-A2U&amp;oh=00_AYDkDYOhe0K19t-HNOVcasvAsagt3PjR4m1Esce2WKVV3Q&amp;oe=67ADA93E","640":"https:\/\/scontent-iad3-2.cdninstagram.com\/v\/t51.29350-15\/466381003_2897694850396998_3873410987975595510_n.jpg?stp=dst-jpg_e35_tt6&amp;_nc_cat=100&amp;ccb=1-7&amp;_nc_sid=18de74&amp;_nc_ohc=SYuZb18BdIgQ7kNvgGmX8qF&amp;_nc_zt=23&amp;_nc_ht=scontent-iad3-2.cdninstagram.com&amp;edm=AM6HXa8EAAAA&amp;_nc_gid=A9xgGR2VJXaaTAEsPLD-A2U&amp;oh=00_AYDkDYOhe0K19t-HNOVcasvAsagt3PjR4m1Esce2WKVV3Q&amp;oe=67ADA93E"}' href="https://www.instagram.com/reel/DCT9MbApLhT/" rel="noopener nofollow" target="_blank">
+                       <span class="sbi-screenreader">
+                        Experience relaxation like never before with our O
+                       </span>
+                       <svg aria-hidden="true" aria-label="Play" class="svg-inline--fa fa-play fa-w-14 sbi_playbtn" data-fa-processed="" data-icon="play" data-prefix="fa" role="presentation" style="color: rgba(255,255,255,1)" viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M424.4 214.7L72.4 6.6C43.8-10.3 0 6.1 0 47.9V464c0 37.5 40.7 60.1 72.4 41.3l352-208c31.4-18.5 31.5-64.1 0-82.6z" fill="currentColor">
+                        </path>
+                       </svg>
+                       <img alt="Experience relaxation like never before with our Odessey power recliner, designed for tech lovers and comfort seekers:
+🔹 2-motor power recline for perfect positioning
+🔹 Power headrest &amp; lumbar support for personalized comfort
+🔹 Bluetooth, AUX, USB MP3 player for your entertainment
+🔹 Wireless charging &amp; USB ports (Types A &amp; C) to keep your devices powered up
+🔹 LED base lighting for a modern touch
+🔹 Built-in cup holders for convenience
+🔹 30-minute massage &amp; soothing heat for the ultimate chill
+🔹 Drop-down iTable to control everything with ease
+With plush pub back support, pad-over-chaise seating, and deep storage arms, this recliner is packed with all the essentials, including snack table holders and iPad/iPhone slots.
+Complete with low-profile wood legs for a sleek, modern finish. This recliner does it all! 💯 #SmartComfort #TechRecliner #UltimateRelaxation #ReclinerGoals #ModernLiving ✨ #Barcalounger #ComfortMeetsLuxury #RecliningStyle #HomeDesign #modernhome #ModernLiving #UltimateComfort #LuxuryLiving #InnovativeFurniture #EnjoyLifesMoments #InteriorDesign #HomeComfort #ModernFurniture #Comfort #Relaxation #Recliner #HomeDecor #FurnitureUpgrade #LeatherRecliner #leatherrecliner" decoding="async" src="https://www.barcalounger.com/wp-content/plugins/instagram-feed/img/placeholder.png"/>
+                      </a>
+                     </div>
+                    </div>
+                    <div class="sbi_item sbi_type_video sbi_new sbi_transition" data-date="1729864693" id="sbi_18133202038327422">
+                     <div class="sbi_photo_wrap">
+                      <a class="sbi_photo" data-full-res="https://scontent-iad3-1.cdninstagram.com/v/t51.29350-15/464467474_8497712986950805_3918872137459746448_n.jpg?stp=dst-jpg_e35_tt6&amp;_nc_cat=110&amp;ccb=1-7&amp;_nc_sid=18de74&amp;_nc_ohc=_7jHBS-Ql2cQ7kNvgFVMrOc&amp;_nc_zt=23&amp;_nc_ht=scontent-iad3-1.cdninstagram.com&amp;edm=AM6HXa8EAAAA&amp;_nc_gid=A9xgGR2VJXaaTAEsPLD-A2U&amp;oh=00_AYATtl5PAE5GBsW2s0dm5Kf7nR8Pnumfwe_nE2rcEpAYWA&amp;oe=67AD84AB" data-img-src-set='{"d":"https:\/\/scontent-iad3-1.cdninstagram.com\/v\/t51.29350-15\/464467474_8497712986950805_3918872137459746448_n.jpg?stp=dst-jpg_e35_tt6&amp;_nc_cat=110&amp;ccb=1-7&amp;_nc_sid=18de74&amp;_nc_ohc=_7jHBS-Ql2cQ7kNvgFVMrOc&amp;_nc_zt=23&amp;_nc_ht=scontent-iad3-1.cdninstagram.com&amp;edm=AM6HXa8EAAAA&amp;_nc_gid=A9xgGR2VJXaaTAEsPLD-A2U&amp;oh=00_AYATtl5PAE5GBsW2s0dm5Kf7nR8Pnumfwe_nE2rcEpAYWA&amp;oe=67AD84AB","150":"https:\/\/scontent-iad3-1.cdninstagram.com\/v\/t51.29350-15\/464467474_8497712986950805_3918872137459746448_n.jpg?stp=dst-jpg_e35_tt6&amp;_nc_cat=110&amp;ccb=1-7&amp;_nc_sid=18de74&amp;_nc_ohc=_7jHBS-Ql2cQ7kNvgFVMrOc&amp;_nc_zt=23&amp;_nc_ht=scontent-iad3-1.cdninstagram.com&amp;edm=AM6HXa8EAAAA&amp;_nc_gid=A9xgGR2VJXaaTAEsPLD-A2U&amp;oh=00_AYATtl5PAE5GBsW2s0dm5Kf7nR8Pnumfwe_nE2rcEpAYWA&amp;oe=67AD84AB","320":"https:\/\/scontent-iad3-1.cdninstagram.com\/v\/t51.29350-15\/464467474_8497712986950805_3918872137459746448_n.jpg?stp=dst-jpg_e35_tt6&amp;_nc_cat=110&amp;ccb=1-7&amp;_nc_sid=18de74&amp;_nc_ohc=_7jHBS-Ql2cQ7kNvgFVMrOc&amp;_nc_zt=23&amp;_nc_ht=scontent-iad3-1.cdninstagram.com&amp;edm=AM6HXa8EAAAA&amp;_nc_gid=A9xgGR2VJXaaTAEsPLD-A2U&amp;oh=00_AYATtl5PAE5GBsW2s0dm5Kf7nR8Pnumfwe_nE2rcEpAYWA&amp;oe=67AD84AB","640":"https:\/\/scontent-iad3-1.cdninstagram.com\/v\/t51.29350-15\/464467474_8497712986950805_3918872137459746448_n.jpg?stp=dst-jpg_e35_tt6&amp;_nc_cat=110&amp;ccb=1-7&amp;_nc_sid=18de74&amp;_nc_ohc=_7jHBS-Ql2cQ7kNvgFVMrOc&amp;_nc_zt=23&amp;_nc_ht=scontent-iad3-1.cdninstagram.com&amp;edm=AM6HXa8EAAAA&amp;_nc_gid=A9xgGR2VJXaaTAEsPLD-A2U&amp;oh=00_AYATtl5PAE5GBsW2s0dm5Kf7nR8Pnumfwe_nE2rcEpAYWA&amp;oe=67AD84AB"}' href="https://www.instagram.com/reel/DBjLQaQJoZg/" rel="noopener nofollow" target="_blank">
+                       <span class="sbi-screenreader">
+                        Get ready to elevate your relaxation with our trip
+                       </span>
+                       <svg aria-hidden="true" aria-label="Play" class="svg-inline--fa fa-play fa-w-14 sbi_playbtn" data-fa-processed="" data-icon="play" data-prefix="fa" role="presentation" style="color: rgba(255,255,255,1)" viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M424.4 214.7L72.4 6.6C43.8-10.3 0 6.1 0 47.9V464c0 37.5 40.7 60.1 72.4 41.3l352-208c31.4-18.5 31.5-64.1 0-82.6z" fill="currentColor">
+                        </path>
+                       </svg>
+                       <img alt="Get ready to elevate your relaxation with our triple power reclining loveseat packed with the latest comfort technology:
+🔹 2-motor power recline
+🔹 Power headrest &amp; lumbar support
+🔹 Bluetooth, AUX, USB MP3 player for your tunes
+🔹 Wireless charging &amp; USB charging for all devices
+🔹 LED base lighting for that sleek glow
+🔹 Built-in cup holders
+🔹 30-minute massage &amp; comforting heat for total relaxation
+🔹 Drop-down iTable to control everything at your fingertips
+Designed with plush pub backs, pad-over-chaise seating, and deep storage track arms with handy snack tables &amp; iPad/iPhone holders. Plus, low-profile wood legs for that modern, stylish look.
+It’s not just a loveseat, it’s a tech-savvy comfort experience. Ready for your living room? 🙌 #SmartComfort #ReclinerVibes #HomeTech #UltimateRelaxation #LoveSeatGoals #ModernLiving ✨ #Barcalounger #ComfortMeetsLuxury #RecliningStyle #HomeDesign #modernhome #ModernLiving #UltimateComfort #LuxuryLiving #InnovativeFurniture #EnjoyLifesMoments #InteriorDesign #HomeComfort #ModernFurniture #Comfort #Relaxation #Recliner #HomeDecor #FurnitureUpgrade #LeatherRecliner #LeatherLoveSeat" decoding="async" src="https://www.barcalounger.com/wp-content/plugins/instagram-feed/img/placeholder.png"/>
+                      </a>
+                     </div>
+                    </div>
+                   </div>
+                   <div id="sbi_load">
+                    <a class="sbi_load_btn" href="javascript:void(0);">
+                     <span class="sbi_btn_text">
+                      Load More
+                     </span>
+                     <span aria-hidden="true" class="sbi_loader sbi_hidden" style="background-color: rgb(255, 255, 255);">
+                     </span>
+                    </a>
+                    <span class="sbi_follow_btn">
+                     <a href="https://www.instagram.com/barcalounger/" rel="nofollow noopener" target="_blank">
+                      <svg aria-hidden="true" aria-label="Instagram" class="svg-inline--fa fa-instagram fa-w-14" data-fa-processed="" data-icon="instagram" data-prefix="fab" role="img" viewbox="0 0 448 512">
+                       <path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z" fill="currentColor">
+                       </path>
+                      </svg>
+                      <span>
+                       Follow on Instagram
+                      </span>
+                     </a>
+                    </span>
+                   </div>
+                   <span class="sbi_resized_image_data" data-feed-id="*1" data-resized='{"18133202038327422":{"id":"464467474_8497712986950805_3918872137459746448_n","ratio":"0.56","sizes":{"full":640,"low":320,"thumb":150},"extension":".webp"},"17985962504746215":{"id":"466381003_2897694850396998_3873410987975595510_n","ratio":"0.56","sizes":{"full":640,"low":320,"thumb":150},"extension":".webp"},"17913334839041037":{"id":"468542623_1286079146073830_2027282489972617557_n","ratio":"1.00","sizes":{"full":640,"low":320,"thumb":150},"extension":".webp"},"18062011192830195":{"id":"469443047_18271023646247258_324123704930127773_n","ratio":"0.56","sizes":{"full":640,"low":320,"thumb":150},"extension":".webp"},"18056459200767955":{"id":"469719328_18270919720247258_6816159366294064624_n","ratio":"0.56","sizes":{"full":640,"low":320,"thumb":150},"extension":".webp"}}'>
+                   </span>
+                  </div>
+                  <style type="text/css">
+                   .sbi_header_palette_custom_1,
+		#sb_instagram.sbi_palette_custom_1,
+		#sbi_lightbox .sbi_lb-outerContainer .sbi_lb-dataContainer,
+		#sbi_lightbox .sbi_lightbox_tooltip,
+		#sbi_lightbox .sbi_share_close{
+			background: #2B0A0A00;
+		}
+												#sb_instagram.sbi_palette_custom_1 #sbi_load .sbi_load_btn {
+			background: #020202;
+		}
+						#sb_instagram.sbi_palette_custom_1 #sbi_load .sbi_follow_btn a {
+			background: #C9AC70;
+		}
+                  </style>
+                  <style type="text/css">
+                   #sb_instagram .sbi_follow_btn a:hover,
+		#sb_instagram .sbi_follow_btn a:focus{
+			outline: none;
+			box-shadow: inset 0 0 10px 20px #707070;
+		}
+                  </style>
+                 </div>
+                </div>
+               </div>
+              </div>
+             </div>
+            </div>
+           </section>
+          </div>
+         </div>
+         <!-- .entry-content -->
+        </article>
+       </main>
+       <!-- #main -->
+      </div>
+      <!-- #primary -->
+     </div>
+    </div>
+   </div>
+   <div id="footer-container">
+    <footer class="site-footer container" id="footer">
+     <div class="container-fluid col-md-10">
+      <div class="footer-widgets row footer-row-1 4-footer-columns px-0">
+       <div class="block col-lg-2 col-md-6 pl-0 footer-widget-1">
+        <div class="widget widget_text" id="text-2">
+         <div class="textwidget">
+          <a class="mdlr-button color-barca -me" href="/contact">
+           <span>
+            Contact Us
+           </span>
+          </a>
+         </div>
+        </div>
+        <div class="widget widget_text" id="text-6">
+         <div class="textwidget">
+          <a class="mdlr-button color-barca -me" href="/order-swatch">
+           <span>
+            Request Swatch
+           </span>
+          </a>
+         </div>
+        </div>
+       </div>
+       <div class="block col-lg-8 col-md-6 pr-0 footer-widget-2">
+        <div class="widget widget_nav_menu" id="nav_menu-2">
+         <span class="gamma widget-title">
+          Information
+         </span>
+         <div class="menu-information-container">
+          <ul class="menu" id="menu-information">
+           <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-15846 nav-item" id="menu-item-15846" itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement">
+            <a class="nav-link" href="https://cms.amptab.com/Manufacturer/12882/Shop2" target="_blank" title="Dealer Login">
+             Dealer Login
+            </a>
+           </li>
+           <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-234 nav-item" id="menu-item-234" itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement">
+            <a class="nav-link" href="https://www.barcalounger.com/become-a-barcalounger-dealer" title="Become a Dealer">
+             Become a Dealer
+            </a>
+           </li>
+           <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-18624 nav-item" id="menu-item-18624" itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement">
+            <a class="nav-link" href="https://www.barcalounger.com/parts-services" title="Parts &amp; Service">
+             Parts &amp; Service
+            </a>
+           </li>
+           <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-18625 nav-item" id="menu-item-18625" itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement">
+            <a class="nav-link" href="https://www.barcalounger.com/warranty" title="Warranty Information">
+             Warranty Information
+            </a>
+           </li>
+           <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-18802 nav-item" id="menu-item-18802" itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement">
+            <a class="nav-link" href="https://www.barcalounger.com/construction-story" title="Construction Story">
+             Construction Story
+            </a>
+           </li>
+           <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-18626 nav-item" id="menu-item-18626" itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement">
+            <a class="nav-link" href="https://www.barcalounger.com/proposition-65-2" title="Proposition 65">
+             Proposition 65
+            </a>
+           </li>
+          </ul>
+         </div>
+        </div>
+       </div>
+       <div class="block col-lg-2 col-md-12 p-0 footer-widget-3">
+        <div class="widget widget_text" id="text-7">
+         <span class="gamma widget-title">
+          FOLLOW US
+         </span>
+         <div class="textwidget">
+          <ul class="navbar-nav flex-row social-nav" id="mdlr-social">
+           <li class="nav-item">
+            <a class="nav-link" href="https://www.facebook.com/barcaloungerfurniture/" rel="me" target="_blank">
+             <i class="fab fa-facebook-square">
+             </i>
+            </a>
+           </li>
+           <li class="nav-item">
+            <a class="nav-link" href="https://www.instagram.com/barcalounger/" rel="me" target="_blank">
+             <i class="fab fa-instagram">
+             </i>
+            </a>
+           </li>
+           <li class="nav-item">
+            <a class="nav-link" href="https://www.youtube.com/channel/UC6d8DrcNAo4-I1aa7OnAPiA" rel="me" target="_blank">
+             <i class="fab fa-youtube-square">
+             </i>
+            </a>
+           </li>
+          </ul>
+         </div>
+        </div>
+       </div>
+       <div class="block col-lg-12 p-0 footer-widget-4">
+        <div class="widget widget_text" id="text-4">
+         <div class="textwidget">
+          <div class="disclaimer">
+           <hr class="mdlr-hr"/>
+           <p>
+            <span class="disc-title">
+             NOTE
+            </span>
+           </p>
+           <p>
+            Measurements and sizes noted on products are approximate, and may vary.
+           </p>
+           <p>
+            <span class="disc-title">
+             DISCLAIMER ON GENERAL LEATHER COLORS
+            </span>
+           </p>
+           <p>
+            Every effort has been made to reflect product colors as accurately as possible. However, due to factors such as differences in monitors and screen settings, we are unable to guarantee that the color you will see on your monitor will accurately reflect the true color of the product ordered. If you would like a swatch of a cover to verify color of an item, please contact us at
+            <a class="__cf_email__" data-cfemail="e78e898188a785869584868b889289808295c984888a" href="/cdn-cgi/l/email-protection">
+             [email protected]
+            </a>
+            and we will be happy to send you a maximum of 3 swatches at no charge. Simply list the product and cover name along with your mailing address.
+           </p>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+     <div class="container-fluid col-md-10 p-0">
+      <div class="site-info">
+       <div class="credit-left">
+        © 2025
+        <a href="https://www.barcalounger.com">
+         Barcalounger
+        </a>
+        |
+        <a href="/wp-login.php">
+         <i class="fas fa-users">
+         </i>
+        </a>
+        | Website designed by:
+        <a href="http://spinawebdesigns.com">
+         Spin A Web Designs
+        </a>
+       </div>
+       <div class="credit-right">
+       </div>
+      </div>
+      <!-- .site-info -->
+     </div>
+    </footer>
+   </div>
+  </div>
+  <!-- Instagram Feed JS -->
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js">
+  </script>
+  <script type="text/javascript">
+   var sbiajaxurl = "https://www.barcalounger.com/wp-admin/admin-ajax.php";
+  </script>
+  <script>
+   jQuery('.ask-alex-btn').on('click', function() {
+      jQuery('#inquiry').modal();
+    });
+  </script>
+  <div aria-hidden="true" aria-labelledby="inquiry" class="modal fade" id="inquiry" role="dialog" tabindex="-1">
+   <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+     <div class="modal-header">
+      <button aria-label="Close" class="close" data-dismiss="modal" type="button">
+       <span aria-hidden="true">
+        ×
+       </span>
+      </button>
+     </div>
+     <div class="modal-body">
+      <script type="text/javascript">
+      </script>
+      <div class="gf_browser_chrome gform_wrapper gform_legacy_markup_wrapper gform-theme--no-framework" data-form-index="0" data-form-theme="legacy" id="gform_wrapper_2">
+       <div class="gform_heading">
+        <h3 class="gform_title">
+         Have a question? Ask Alex
+        </h3>
+       </div>
+       <form action="/" data-formid="2" enctype="multipart/form-data" id="gform_2" method="post" novalidate="">
+        <div class="gform-body gform_body">
+         <ul class="gform_fields top_label form_sublabel_below description_below validation_below" id="gform_fields_2">
+          <li class="gfield gfield--type-name gfield--width-full gfield_contains_required field_sublabel_below gfield--no-description field_description_below field_validation_below gfield_visibility_visible form-group" id="field_2_7">
+           <label class="gfield_label gform-field-label gfield_label_before_complex">
+            Name
+            <span class="gfield_required">
+             <span class="gfield_required gfield_required_asterisk">
+              *
+             </span>
+            </span>
+           </label>
+           <div class="ginput_complex ginput_container ginput_container--name no_prefix has_first_name no_middle_name has_last_name no_suffix gf_name_has_2 ginput_container_name gform-grid-row" id="input_2_7">
+            <span class="name_first gform-grid-col gform-grid-col--size-auto" id="input_2_7_3_container">
+             <input aria-required="true" class="form-control" id="input_2_7_3" name="input_7.3" type="text" value=""/>
+             <label class="gform-field-label gform-field-label--type-sub" for="input_2_7_3">
+              First
+             </label>
+            </span>
+            <span class="name_last gform-grid-col gform-grid-col--size-auto" id="input_2_7_6_container">
+             <input aria-required="true" class="form-control" id="input_2_7_6" name="input_7.6" type="text" value=""/>
+             <label class="gform-field-label gform-field-label--type-sub" for="input_2_7_6">
+              Last
+             </label>
+            </span>
+           </div>
+          </li>
+          <li class="gfield gfield--type-email gfield_contains_required field_sublabel_below gfield--no-description field_description_below field_validation_below gfield_visibility_visible form-group" id="field_2_2">
+           <label class="gfield_label gform-field-label" for="input_2_2">
+            Email Address
+            <span class="gfield_required">
+             <span class="gfield_required gfield_required_asterisk">
+              *
+             </span>
+            </span>
+           </label>
+           <div class="ginput_container ginput_container_email">
+            <input aria-invalid="false" aria-required="true" class="form-control large" id="input_2_2" name="input_2" type="email" value=""/>
+           </div>
+          </li>
+          <li class="gfield gfield--type-phone gfield--width-full gfield_contains_required field_sublabel_below gfield--no-description field_description_below field_validation_below gfield_visibility_visible form-group" id="field_2_6">
+           <label class="gfield_label gform-field-label" for="input_2_6">
+            Phone
+            <span class="gfield_required">
+             <span class="gfield_required gfield_required_asterisk">
+              *
+             </span>
+            </span>
+           </label>
+           <div class="ginput_container ginput_container_phone">
+            <input aria-invalid="false" aria-required="true" class="form-control large" id="input_2_6" name="input_6" type="tel" value=""/>
+           </div>
+          </li>
+          <li class="gfield gfield--type-text gfield_contains_required field_sublabel_below gfield--no-description field_description_below field_validation_below gfield_visibility_visible form-group" id="field_2_4">
+           <label class="gfield_label gform-field-label" for="input_2_4">
+            Subject
+            <span class="gfield_required">
+             <span class="gfield_required gfield_required_asterisk">
+              *
+             </span>
+            </span>
+           </label>
+           <div class="ginput_container ginput_container_text">
+            <input aria-invalid="false" aria-required="true" class="form-control large" id="input_2_4" name="input_4" type="text" value=""/>
+           </div>
+          </li>
+          <li class="gfield gfield--type-textarea gfield_contains_required field_sublabel_below gfield--no-description field_description_below field_validation_below gfield_visibility_visible form-group" id="field_2_3">
+           <label class="gfield_label gform-field-label" for="input_2_3">
+            Message
+            <span class="gfield_required">
+             <span class="gfield_required gfield_required_asterisk">
+              *
+             </span>
+            </span>
+           </label>
+           <div class="ginput_container ginput_container_textarea">
+            <textarea aria-invalid="false" aria-required="true" class="textarea medium form-control" cols="50" id="input_2_3" name="input_3" rows="10"></textarea>
+           </div>
+          </li>
+          <li class="gfield gfield--type-captcha field_sublabel_below gfield--no-description field_description_below field_validation_below gfield_visibility_visible form-group" id="field_2_5">
+           <label class="gfield_label gform-field-label" for="input_2_5">
+            CAPTCHA
+           </label>
+           <div class="ginput_container ginput_recaptcha" data-badge="" data-sitekey="6LepZVAUAAAAAN_ciG-fqdcp6k_G2u6h-WRknhh6" data-tabindex="0" data-theme="light" id="input_2_5">
+           </div>
+          </li>
+         </ul>
+        </div>
+        <div class="gform-footer gform_footer top_label">
+         <input class="gform_button buttonx btn btn-primary" id="gform_submit_button_2" onclick="gform.submission.handleButtonClick(this);" type="submit" value="Submit"/>
+         <input class="gform_hidden" data-js="gform_submission_method_2" name="gform_submission_method" type="hidden" value="postback">
+          <input class="gform_hidden" data-js="gform_theme_2" id="gform_theme_2" name="gform_theme" type="hidden" value="legacy"/>
+          <input class="gform_hidden" data-js="gform_style_settings_2" id="gform_style_settings_2" name="gform_style_settings" type="hidden" value=""/>
+          <input class="gform_hidden" name="is_submit_2" type="hidden" value="1"/>
+          <input class="gform_hidden" name="gform_submit" type="hidden" value="2"/>
+          <input class="gform_hidden" name="gform_unique_id" type="hidden" value=""/>
+          <input class="gform_hidden" name="state_2" type="hidden" value="WyJbXSIsIjg1ZDE3Y2Y4Y2Q0OTUzNmEyMWJiOTUyMzc2MzAyNmZjIl0="/>
+          <input autocomplete="off" class="gform_hidden" id="gform_target_page_number_2" name="gform_target_page_number_2" type="hidden" value="0"/>
+          <input autocomplete="off" class="gform_hidden" id="gform_source_page_number_2" name="gform_source_page_number_2" type="hidden" value="1"/>
+          <input name="gform_field_values" type="hidden" value=""/>
+         </input>
+        </div>
+       </form>
+      </div>
+      <script type="text/javascript">
+       /* <![CDATA[ */
+ gform.initializeOnLoaded( function() {gformInitSpinner( 2, 'https://www.barcalounger.com/wp-content/plugins/gravityforms/images/spinner.svg', true );jQuery('#gform_ajax_frame_2').on('load',function(){var contents = jQuery(this).contents().find('*').html();var is_postback = contents.indexOf('GF_AJAX_POSTBACK') >= 0;if(!is_postback){return;}var form_content = jQuery(this).contents().find('#gform_wrapper_2');var is_confirmation = jQuery(this).contents().find('#gform_confirmation_wrapper_2').length > 0;var is_redirect = contents.indexOf('gformRedirect(){') >= 0;var is_form = form_content.length > 0 && ! is_redirect && ! is_confirmation;var mt = parseInt(jQuery('html').css('margin-top'), 10) + parseInt(jQuery('body').css('margin-top'), 10) + 100;if(is_form){jQuery('#gform_wrapper_2').html(form_content.html());if(form_content.hasClass('gform_validation_error')){jQuery('#gform_wrapper_2').addClass('gform_validation_error');} else {jQuery('#gform_wrapper_2').removeClass('gform_validation_error');}setTimeout( function() { /* delay the scroll by 50 milliseconds to fix a bug in chrome */  }, 50 );if(window['gformInitDatepicker']) {gformInitDatepicker();}if(window['gformInitPriceFields']) {gformInitPriceFields();}var current_page = jQuery('#gform_source_page_number_2').val();gformInitSpinner( 2, 'https://www.barcalounger.com/wp-content/plugins/gravityforms/images/spinner.svg', true );jQuery(document).trigger('gform_page_loaded', [2, current_page]);window['gf_submitting_2'] = false;}else if(!is_redirect){var confirmation_content = jQuery(this).contents().find('.GF_AJAX_POSTBACK').html();if(!confirmation_content){confirmation_content = contents;}jQuery('#gform_wrapper_2').replaceWith(confirmation_content);jQuery(document).trigger('gform_confirmation_loaded', [2]);window['gf_submitting_2'] = false;wp.a11y.speak(jQuery('#gform_confirmation_message_2').text());}else{jQuery('#gform_2').append(contents);if(window['gformRedirect']) {gformRedirect();}}jQuery(document).trigger("gform_pre_post_render", [{ formId: "2", currentPage: "current_page", abort: function() { this.preventDefault(); } }]);                if (event && event.defaultPrevented) {                return;         }        const gformWrapperDiv = document.getElementById( "gform_wrapper_2" );        if ( gformWrapperDiv ) {            const visibilitySpan = document.createElement( "span" );            visibilitySpan.id = "gform_visibility_test_2";            gformWrapperDiv.insertAdjacentElement( "afterend", visibilitySpan );        }        const visibilityTestDiv = document.getElementById( "gform_visibility_test_2" );        let postRenderFired = false;                function triggerPostRender() {            if ( postRenderFired ) {                return;            }            postRenderFired = true;            jQuery( document ).trigger( 'gform_post_render', [2, current_page] );            gform.utils.trigger( { event: 'gform/postRender', native: false, data: { formId: 2, currentPage: current_page } } );            gform.utils.trigger( { event: 'gform/post_render', native: false, data: { formId: 2, currentPage: current_page } } );            if ( visibilityTestDiv ) {                visibilityTestDiv.parentNode.removeChild( visibilityTestDiv );            }        }        function debounce( func, wait, immediate ) {            var timeout;            return function() {                var context = this, args = arguments;                var later = function() {                    timeout = null;                    if ( !immediate ) func.apply( context, args );                };                var callNow = immediate && !timeout;                clearTimeout( timeout );                timeout = setTimeout( later, wait );                if ( callNow ) func.apply( context, args );            };        }        const debouncedTriggerPostRender = debounce( function() {            triggerPostRender();        }, 200 );        if ( visibilityTestDiv && visibilityTestDiv.offsetParent === null ) {            const observer = new MutationObserver( ( mutations ) => {                mutations.forEach( ( mutation ) => {                    if ( mutation.type === 'attributes' && visibilityTestDiv.offsetParent !== null ) {                        debouncedTriggerPostRender();                        observer.disconnect();                    }                });            });            observer.observe( document.body, {                attributes: true,                childList: false,                subtree: true,                attributeFilter: [ 'style', 'class' ],            });        } else {            triggerPostRender();        }    } );} ); 
+/* ]]> */
+      </script>
+     </div>
+     <div class="modal-footer">
+     </div>
+    </div>
+   </div>
+  </div>
+  <script>
+   const lazyloadRunObserver = () => {
+					const lazyloadBackgrounds = document.querySelectorAll( `.e-con.e-parent:not(.e-lazyloaded)` );
+					const lazyloadBackgroundObserver = new IntersectionObserver( ( entries ) => {
+						entries.forEach( ( entry ) => {
+							if ( entry.isIntersecting ) {
+								let lazyloadBackground = entry.target;
+								if( lazyloadBackground ) {
+									lazyloadBackground.classList.add( 'e-lazyloaded' );
+								}
+								lazyloadBackgroundObserver.unobserve( entry.target );
+							}
+						});
+					}, { rootMargin: '200px 0px 200px 0px' } );
+					lazyloadBackgrounds.forEach( ( lazyloadBackground ) => {
+						lazyloadBackgroundObserver.observe( lazyloadBackground );
+					} );
+				};
+				const events = [
+					'DOMContentLoaded',
+					'elementor/lazyload/observe',
+				];
+				events.forEach( ( event ) => {
+					document.addEventListener( event, lazyloadRunObserver );
+				} );
+  </script>
+  <script type="text/javascript">
+   (function () {
+			var c = document.body.className;
+			c = c.replace(/woocommerce-no-js/, 'woocommerce-js');
+			document.body.className = c;
+		})();
+  </script>
+  <link href="https://www.barcalounger.com/wp-content/plugins/woocommerce/assets/client/blocks/wc-blocks.css?ver=wc-9.6.1" id="wc-blocks-style-css" media="all" rel="stylesheet" type="text/css"/>
+  <link href="https://www.barcalounger.com/wp-content/plugins/gravityforms/legacy/css/formreset.min.css?ver=2.9.2" id="gforms_reset_css-css" media="all" rel="stylesheet" type="text/css"/>
+  <link href="https://www.barcalounger.com/wp-content/plugins/gravityforms/legacy/css/formsmain.min.css?ver=2.9.2" id="gforms_formsmain_css-css" media="all" rel="stylesheet" type="text/css"/>
+  <link href="https://www.barcalounger.com/wp-content/plugins/gravityforms/legacy/css/readyclass.min.css?ver=2.9.2" id="gforms_ready_class_css-css" media="all" rel="stylesheet" type="text/css"/>
+  <link href="https://www.barcalounger.com/wp-content/plugins/gravityforms/legacy/css/browsers.min.css?ver=2.9.2" id="gforms_browsers_css-css" media="all" rel="stylesheet" type="text/css"/>
+  <script defer="" id="flick-js-js" src="https://www.barcalounger.com/wp-content/themes/mdlr/assets/vendor/flickity/flickity.pkgd.min.js" type="text/javascript">
+  </script>
+  <script data-wp-strategy="async" defer="" id="google-tag-manager-js" src="https://www.googletagmanager.com/gtag/js?id=G-NK8XZJECLB" type="text/javascript">
+  </script>
+  <script id="wp-hooks-js" src="https://www.barcalounger.com/wp-includes/js/dist/hooks.min.js?ver=4d63a3d491d11ffd8ac6" type="text/javascript">
+  </script>
+  <script id="wp-i18n-js" src="https://www.barcalounger.com/wp-includes/js/dist/i18n.min.js?ver=5e580eb46a90c2b997e6" type="text/javascript">
+  </script>
+  <script id="wp-i18n-js-after" type="text/javascript">
+   /* <![CDATA[ */
+wp.i18n.setLocaleData( { 'text direction\u0004ltr': [ 'ltr' ] } );
+/* ]]> */
+  </script>
+  <script defer="" id="woocommerce-google-analytics-integration-js" src="https://www.barcalounger.com/wp-content/plugins/woocommerce-google-analytics-integration/assets/js/build/main.js?ver=50c6d17d67ef40d67991" type="text/javascript">
+  </script>
+  <script id="swatches-and-photos-js-extra" type="text/javascript">
+   /* <![CDATA[ */
+var wc_swatches_params = {"ajax_url":"https:\/\/www.barcalounger.com\/wp-admin\/admin-ajax.php"};
+/* ]]> */
+  </script>
+  <script defer="" id="swatches-and-photos-js" src="https://www.barcalounger.com/wp-content/plugins/woocommerce-variation-swatches-and-photos/assets/js/swatches-and-photos.js?ver=3.0.6" type="text/javascript">
+  </script>
+  <script defer="" id="popper-js-js" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" type="text/javascript">
+  </script>
+  <script defer="" id="bootstrap-js-js" src="https://www.barcalounger.com/wp-content/themes/mdlr/boot/js/bootstrap.min.js" type="text/javascript">
+  </script>
+  <script defer="" id="mdlr-script-js" src="https://www.barcalounger.com/wp-content/themes/mdlr/js/mdlr-scripts.js" type="text/javascript">
+  </script>
+  <script defer="" id="masonry-pkgd-js-js" src="https://www.barcalounger.com/wp-content/themes/mdlr/assets/vendor/masonry/js/masonry.pkgd.min.js" type="text/javascript">
+  </script>
+  <script defer="" id="masonry-js-js" src="https://www.barcalounger.com/wp-content/themes/mdlr/assets/js/masonry/masonry.js" type="text/javascript">
+  </script>
+  <script defer="" id="dflip-script-js" src="https://www.barcalounger.com/wp-content/plugins/3d-flipbook-dflip-lite/assets/js/dflip.min.js?ver=2.3.57" type="text/javascript">
+  </script>
+  <script defer="" id="sourcebuster-js-js" src="https://www.barcalounger.com/wp-content/plugins/woocommerce/assets/js/sourcebuster/sourcebuster.min.js?ver=9.6.1" type="text/javascript">
+  </script>
+  <script id="wc-order-attribution-js-extra" type="text/javascript">
+   /* <![CDATA[ */
+var wc_order_attribution = {"params":{"lifetime":1.0000000000000000818030539140313095458623138256371021270751953125e-5,"session":30,"base64":false,"ajaxurl":"https:\/\/www.barcalounger.com\/wp-admin\/admin-ajax.php","prefix":"wc_order_attribution_","allowTracking":true},"fields":{"source_type":"current.typ","referrer":"current_add.rf","utm_campaign":"current.cmp","utm_source":"current.src","utm_medium":"current.mdm","utm_content":"current.cnt","utm_id":"current.id","utm_term":"current.trm","utm_source_platform":"current.plt","utm_creative_format":"current.fmt","utm_marketing_tactic":"current.tct","session_entry":"current_add.ep","session_start_time":"current_add.fd","session_pages":"session.pgs","session_count":"udata.vst","user_agent":"udata.uag"}};
+/* ]]> */
+  </script>
+  <script defer="" id="wc-order-attribution-js" src="https://www.barcalounger.com/wp-content/plugins/woocommerce/assets/js/frontend/order-attribution.min.js?ver=9.6.1" type="text/javascript">
+  </script>
+  <script defer="" id="imagesloaded-js" src="https://www.barcalounger.com/wp-includes/js/imagesloaded.min.js?ver=5.0.0" type="text/javascript">
+  </script>
+  <script defer="" id="swiper-js" src="https://www.barcalounger.com/wp-content/plugins/elementor/assets/lib/swiper/v8/swiper.min.js?ver=8.4.5" type="text/javascript">
+  </script>
+  <script id="fca_pc_client_js-js-extra" type="text/javascript">
+   /* <![CDATA[ */
+var fcaPcEvents = [];
+var fcaPcPost = {"title":"Home 2024","type":"page","id":"17890","categories":[]};
+var fcaPcOptions = {"pixel_types":["Facebook Pixel"],"ajax_url":"https:\/\/www.barcalounger.com\/wp-admin\/admin-ajax.php","debug":"","edd_currency":"USD","nonce":"5c09da179d","utm_support":"","user_parameters":"","edd_enabled":"","edd_delay":"0","woo_enabled":"","woo_delay":"0","video_enabled":""};
+/* ]]> */
+  </script>
+  <script defer="" id="fca_pc_client_js-js" src="https://www.barcalounger.com/wp-content/plugins/facebook-conversion-pixel/pixel-cat.min.js?ver=3.0.6" type="text/javascript">
+  </script>
+  <script defer="" id="fca_pc_video_js-js" src="https://www.barcalounger.com/wp-content/plugins/facebook-conversion-pixel/video.js" type="text/javascript">
+  </script>
+  <script id="sbi_scripts-js-extra" type="text/javascript">
+   /* <![CDATA[ */
+var sb_instagram_js_options = {"font_method":"svg","resized_url":"https:\/\/www.barcalounger.com\/wp-content\/uploads\/sb-instagram-feed-images\/","placeholder":"https:\/\/www.barcalounger.com\/wp-content\/plugins\/instagram-feed\/img\/placeholder.png","ajax_url":"https:\/\/www.barcalounger.com\/wp-admin\/admin-ajax.php"};
+/* ]]> */
+  </script>
+  <script id="sbi_scripts-js" src="https://www.barcalounger.com/wp-content/plugins/instagram-feed/js/sbi-scripts.min.js?ver=6.6.1" type="text/javascript">
+  </script>
+  <script id="wp-dom-ready-js" src="https://www.barcalounger.com/wp-includes/js/dist/dom-ready.min.js?ver=f77871ff7694fffea381" type="text/javascript">
+  </script>
+  <script id="wp-a11y-js" src="https://www.barcalounger.com/wp-includes/js/dist/a11y.min.js?ver=3156534cc54473497e14" type="text/javascript">
+  </script>
+  <script defer="defer" id="gform_json-js" src="https://www.barcalounger.com/wp-content/plugins/gravityforms/js/jquery.json.min.js?ver=2.9.2" type="text/javascript">
+  </script>
+  <script id="gform_gravityforms-js-extra" type="text/javascript">
+   /* <![CDATA[ */
+var gform_i18n = {"datepicker":{"days":{"monday":"Mo","tuesday":"Tu","wednesday":"We","thursday":"Th","friday":"Fr","saturday":"Sa","sunday":"Su"},"months":{"january":"January","february":"February","march":"March","april":"April","may":"May","june":"June","july":"July","august":"August","september":"September","october":"October","november":"November","december":"December"},"firstDay":1,"iconText":"Select date"}};
+var gf_legacy_multi = [];
+var gform_gravityforms = {"strings":{"invalid_file_extension":"This type of file is not allowed. Must be one of the following:","delete_file":"Delete this file","in_progress":"in progress","file_exceeds_limit":"File exceeds size limit","illegal_extension":"This type of file is not allowed.","max_reached":"Maximum number of files reached","unknown_error":"There was a problem while saving the file on the server","currently_uploading":"Please wait for the uploading to complete","cancel":"Cancel","cancel_upload":"Cancel this upload","cancelled":"Cancelled"},"vars":{"images_url":"https:\/\/www.barcalounger.com\/wp-content\/plugins\/gravityforms\/images"}};
+var gf_global = {"gf_currency_config":{"name":"U.S. Dollar","symbol_left":"$","symbol_right":"","symbol_padding":"","thousand_separator":",","decimal_separator":".","decimals":2,"code":"USD"},"base_url":"https:\/\/www.barcalounger.com\/wp-content\/plugins\/gravityforms","number_formats":[],"spinnerUrl":"https:\/\/www.barcalounger.com\/wp-content\/plugins\/gravityforms\/images\/spinner.svg","version_hash":"a9eca3e2535b6a7baa00502653fb65ca","strings":{"newRowAdded":"New row added.","rowRemoved":"Row removed","formSaved":"The form has been saved.  The content contains the link to return and complete the form."}};
+/* ]]> */
+  </script>
+  <script defer="defer" id="gform_gravityforms-js" src="https://www.barcalounger.com/wp-content/plugins/gravityforms/js/gravityforms.min.js?ver=2.9.2" type="text/javascript">
+  </script>
+  <script defer="defer" id="gform_recaptcha-js" src="https://www.google.com/recaptcha/api.js?hl=en#038;render=explicit" type="text/javascript">
+  </script>
+  <script defer="defer" id="gform_masked_input-js" src="https://www.barcalounger.com/wp-content/plugins/gravityforms/js/jquery.maskedinput.min.js?ver=2.9.2" type="text/javascript">
+  </script>
+  <script defer="defer" id="gform_gravityforms_utils-js" src="https://www.barcalounger.com/wp-content/plugins/gravityforms/assets/js/dist/utils.min.js?ver=501a987060f4426fb517400c73c7fc1e" type="text/javascript">
+  </script>
+  <script defer="defer" id="gform_gravityforms_theme_vendors-js" src="https://www.barcalounger.com/wp-content/plugins/gravityforms/assets/js/dist/vendor-theme.min.js?ver=ddd2702ee024d421149a5e61416f1ff5" type="text/javascript">
+  </script>
+  <script id="gform_gravityforms_theme-js-extra" type="text/javascript">
+   /* <![CDATA[ */
+var gform_theme_config = {"common":{"form":{"honeypot":{"version_hash":"a9eca3e2535b6a7baa00502653fb65ca"},"ajax":{"ajaxurl":"https:\/\/www.barcalounger.com\/wp-admin\/admin-ajax.php","ajax_submission_nonce":"c750019f9f","i18n":{"step_announcement":"Step %1$s of %2$s, %3$s","unknown_error":"There was an unknown error processing your request. Please try again."}}}},"hmr_dev":"","public_path":"https:\/\/www.barcalounger.com\/wp-content\/plugins\/gravityforms\/assets\/js\/dist\/","config_nonce":"5a435b9475"};
+/* ]]> */
+  </script>
+  <script defer="defer" id="gform_gravityforms_theme-js" src="https://www.barcalounger.com/wp-content/plugins/gravityforms/assets/js/dist/scripts-theme.min.js?ver=b8fbd9cb240c8684c860c87e4b060364" type="text/javascript">
+  </script>
+  <script id="woocommerce-google-analytics-integration-data-js-after" type="text/javascript">
+   /* <![CDATA[ */
+window.ga4w = { data: {"cart":{"items":[],"coupons":[],"totals":{"currency_code":"USD","total_price":0,"currency_minor_unit":0}}}, settings: {"tracker_function_name":"gtag","events":["purchase","add_to_cart","remove_from_cart","view_item_list","select_content","view_item","begin_checkout"],"identifier":null} }; document.dispatchEvent(new Event("ga4w:ready"));
+/* ]]> */
+  </script>
+  <script id="elementor-pro-webpack-runtime-js" src="https://www.barcalounger.com/wp-content/plugins/elementor-pro/assets/js/webpack-pro.runtime.min.js?ver=3.27.3" type="text/javascript">
+  </script>
+  <script id="elementor-webpack-runtime-js" src="https://www.barcalounger.com/wp-content/plugins/elementor/assets/js/webpack.runtime.min.js?ver=3.27.3" type="text/javascript">
+  </script>
+  <script id="elementor-frontend-modules-js" src="https://www.barcalounger.com/wp-content/plugins/elementor/assets/js/frontend-modules.min.js?ver=3.27.3" type="text/javascript">
+  </script>
+  <script id="elementor-pro-frontend-js-before" type="text/javascript">
+   /* <![CDATA[ */
+var ElementorProFrontendConfig = {"ajaxurl":"https:\/\/www.barcalounger.com\/wp-admin\/admin-ajax.php","nonce":"34432d6b68","urls":{"assets":"https:\/\/www.barcalounger.com\/wp-content\/plugins\/elementor-pro\/assets\/","rest":"https:\/\/www.barcalounger.com\/wp-json\/"},"settings":{"lazy_load_background_images":true},"popup":{"hasPopUps":false},"shareButtonsNetworks":{"facebook":{"title":"Facebook","has_counter":true},"twitter":{"title":"Twitter"},"linkedin":{"title":"LinkedIn","has_counter":true},"pinterest":{"title":"Pinterest","has_counter":true},"reddit":{"title":"Reddit","has_counter":true},"vk":{"title":"VK","has_counter":true},"odnoklassniki":{"title":"OK","has_counter":true},"tumblr":{"title":"Tumblr"},"digg":{"title":"Digg"},"skype":{"title":"Skype"},"stumbleupon":{"title":"StumbleUpon","has_counter":true},"mix":{"title":"Mix"},"telegram":{"title":"Telegram"},"pocket":{"title":"Pocket","has_counter":true},"xing":{"title":"XING","has_counter":true},"whatsapp":{"title":"WhatsApp"},"email":{"title":"Email"},"print":{"title":"Print"},"x-twitter":{"title":"X"},"threads":{"title":"Threads"}},"woocommerce":{"menu_cart":{"cart_page_url":"https:\/\/www.barcalounger.com\/cart","checkout_page_url":"https:\/\/www.barcalounger.com\/checkout","fragments_nonce":"e09b1671b4"}},"facebook_sdk":{"lang":"en_US","app_id":""},"lottie":{"defaultAnimationUrl":"https:\/\/www.barcalounger.com\/wp-content\/plugins\/elementor-pro\/modules\/lottie\/assets\/animations\/default.json"}};
+/* ]]> */
+  </script>
+  <script id="elementor-pro-frontend-js" src="https://www.barcalounger.com/wp-content/plugins/elementor-pro/assets/js/frontend.min.js?ver=3.27.3" type="text/javascript">
+  </script>
+  <script id="jquery-ui-core-js" src="https://www.barcalounger.com/wp-includes/js/jquery/ui/core.min.js?ver=1.13.3" type="text/javascript">
+  </script>
+  <script id="elementor-frontend-js-before" type="text/javascript">
+   /* <![CDATA[ */
+var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false,"isScriptDebug":false},"i18n":{"shareOnFacebook":"Share on Facebook","shareOnTwitter":"Share on Twitter","pinIt":"Pin it","download":"Download","downloadImage":"Download image","fullscreen":"Fullscreen","zoom":"Zoom","share":"Share","playVideo":"Play Video","previous":"Previous","next":"Next","close":"Close","a11yCarouselPrevSlideMessage":"Previous slide","a11yCarouselNextSlideMessage":"Next slide","a11yCarouselFirstSlideMessage":"This is the first slide","a11yCarouselLastSlideMessage":"This is the last slide","a11yCarouselPaginationBulletMessage":"Go to slide"},"is_rtl":false,"breakpoints":{"xs":0,"sm":480,"md":768,"lg":1025,"xl":1440,"xxl":1600},"responsive":{"breakpoints":{"mobile":{"label":"Mobile Portrait","value":767,"default_value":767,"direction":"max","is_enabled":true},"mobile_extra":{"label":"Mobile Landscape","value":880,"default_value":880,"direction":"max","is_enabled":false},"tablet":{"label":"Tablet Portrait","value":1024,"default_value":1024,"direction":"max","is_enabled":true},"tablet_extra":{"label":"Tablet Landscape","value":1200,"default_value":1200,"direction":"max","is_enabled":false},"laptop":{"label":"Laptop","value":1366,"default_value":1366,"direction":"max","is_enabled":false},"widescreen":{"label":"Widescreen","value":2400,"default_value":2400,"direction":"min","is_enabled":false}},"hasCustomBreakpoints":false},"version":"3.27.3","is_static":false,"experimentalFeatures":{"additional_custom_breakpoints":true,"e_swiper_latest":true,"e_onboarding":true,"theme_builder_v2":true,"home_screen":true,"landing-pages":true,"editor_v2":true,"link-in-bio":true,"floating-buttons":true},"urls":{"assets":"https:\/\/www.barcalounger.com\/wp-content\/plugins\/elementor\/assets\/","ajaxurl":"https:\/\/www.barcalounger.com\/wp-admin\/admin-ajax.php","uploadUrl":"https:\/\/www.barcalounger.com\/wp-content\/uploads"},"nonces":{"floatingButtonsClickTracking":"4a894de7df"},"swiperClass":"swiper","settings":{"page":[],"editorPreferences":[]},"kit":{"active_breakpoints":["viewport_mobile","viewport_tablet"],"global_image_lightbox":"yes","lightbox_enable_counter":"yes","lightbox_enable_fullscreen":"yes","lightbox_enable_zoom":"yes","lightbox_enable_share":"yes","lightbox_title_src":"title","lightbox_description_src":"description","woocommerce_notices_elements":[]},"post":{"id":17890,"title":"RELAX%20%7C%20Home%20%7C%20BarcaLounger","excerpt":"","featuredImage":false}};
+/* ]]> */
+  </script>
+  <script id="elementor-frontend-js" src="https://www.barcalounger.com/wp-content/plugins/elementor/assets/js/frontend.min.js?ver=3.27.3" type="text/javascript">
+  </script>
+  <script id="pro-elements-handlers-js" src="https://www.barcalounger.com/wp-content/plugins/elementor-pro/assets/js/elements-handlers.min.js?ver=3.27.3" type="text/javascript">
+  </script>
+  <script data-cfasync="false">
+   var dFlipLocation = "https://www.barcalounger.com/wp-content/plugins/3d-flipbook-dflip-lite/assets/"; var dFlipWPGlobal = {"text":{"toggleSound":"Turn on\/off Sound","toggleThumbnails":"Toggle Thumbnails","toggleOutline":"Toggle Outline\/Bookmark","previousPage":"Previous Page","nextPage":"Next Page","toggleFullscreen":"Toggle Fullscreen","zoomIn":"Zoom In","zoomOut":"Zoom Out","toggleHelp":"Toggle Help","singlePageMode":"Single Page Mode","doublePageMode":"Double Page Mode","downloadPDFFile":"Download PDF File","gotoFirstPage":"Goto First Page","gotoLastPage":"Goto Last Page","share":"Share","mailSubject":"I wanted you to see this FlipBook","mailBody":"Check out this site {{url}}","loading":"DearFlip: Loading "},"viewerType":"flipbook","moreControls":"download,pageMode,startPage,endPage,sound","hideControls":"","scrollWheel":"false","backgroundColor":"#777","backgroundImage":"","height":"auto","paddingLeft":"20","paddingRight":"20","controlsPosition":"bottom","duration":800,"soundEnable":"true","enableDownload":"true","showSearchControl":"false","showPrintControl":"false","enableAnnotation":false,"enableAnalytics":"false","webgl":"true","hard":"none","maxTextureSize":"1600","rangeChunkSize":"524288","zoomRatio":1.5,"stiffness":3,"pageMode":"0","singlePageMode":"0","pageSize":"0","autoPlay":"false","autoPlayDuration":5000,"autoPlayStart":"false","linkTarget":"2","sharePrefix":"flipbook-"};
+  </script>
+  <script type="text/javascript">
+   /* <![CDATA[ */
+ gform.initializeOnLoaded( function() { jQuery(document).on('gform_post_render', function(event, formId, currentPage){if(formId == 2) {jQuery('#input_2_6').mask('(999) 999-9999').bind('keypress', function(e){if(e.which == 13){jQuery(this).blur();} } );} } );jQuery(document).on('gform_post_conditional_logic', function(event, formId, fields, isInit){} ) } ); 
+/* ]]> */
+  </script>
+  <script type="text/javascript">
+   /* <![CDATA[ */
+ gform.initializeOnLoaded( function() {jQuery(document).trigger("gform_pre_post_render", [{ formId: "2", currentPage: "1", abort: function() { this.preventDefault(); } }]);                if (event && event.defaultPrevented) {                return;         }        const gformWrapperDiv = document.getElementById( "gform_wrapper_2" );        if ( gformWrapperDiv ) {            const visibilitySpan = document.createElement( "span" );            visibilitySpan.id = "gform_visibility_test_2";            gformWrapperDiv.insertAdjacentElement( "afterend", visibilitySpan );        }        const visibilityTestDiv = document.getElementById( "gform_visibility_test_2" );        let postRenderFired = false;                function triggerPostRender() {            if ( postRenderFired ) {                return;            }            postRenderFired = true;            jQuery( document ).trigger( 'gform_post_render', [2, 1] );            gform.utils.trigger( { event: 'gform/postRender', native: false, data: { formId: 2, currentPage: 1 } } );            gform.utils.trigger( { event: 'gform/post_render', native: false, data: { formId: 2, currentPage: 1 } } );            if ( visibilityTestDiv ) {                visibilityTestDiv.parentNode.removeChild( visibilityTestDiv );            }        }        function debounce( func, wait, immediate ) {            var timeout;            return function() {                var context = this, args = arguments;                var later = function() {                    timeout = null;                    if ( !immediate ) func.apply( context, args );                };                var callNow = immediate && !timeout;                clearTimeout( timeout );                timeout = setTimeout( later, wait );                if ( callNow ) func.apply( context, args );            };        }        const debouncedTriggerPostRender = debounce( function() {            triggerPostRender();        }, 200 );        if ( visibilityTestDiv && visibilityTestDiv.offsetParent === null ) {            const observer = new MutationObserver( ( mutations ) => {                mutations.forEach( ( mutation ) => {                    if ( mutation.type === 'attributes' && visibilityTestDiv.offsetParent !== null ) {                        debouncedTriggerPostRender();                        observer.disconnect();                    }                });            });            observer.observe( document.body, {                attributes: true,                childList: false,                subtree: true,                attributeFilter: [ 'style', 'class' ],            });        } else {            triggerPostRender();        }    } ); 
+/* ]]> */
+  </script>
+ </body>
+</html>
