@@ -101,8 +101,9 @@ def get_collections_products():
 
 
 def get_prod_html():
-    url = 'https://www.barcalounger.com/view-all-options/anaheim-power-recline?attribute_pa_covers=dobbs-saddle'
+    # url = 'https://www.barcalounger.com/view-all-options/anaheim-power-recline?attribute_pa_covers=dobbs-saddle'
     # url = "https://www.barcalounger.com/view-all-options/langston-power-lift-recline?attribute_pa_covers=venzia-blue"
+    url = "https://www.barcalounger.com/view-all-options/monico?attribute_pa_covers=ashland-granite"
     with sync_playwright() as p:
         browser = p.chromium.launch(headless=True)
         page = browser.new_page()
@@ -114,61 +115,6 @@ def get_prod_html():
             file.write(soup.prettify())
 
 
-        # Initialize a dictionary to store the scraped data
-        scraped_data = {}
-
-        # Find all tables with class "shop_attributes product_meta"
-        tables = soup.find_all('table', class_='shop_attributes product_meta')
-
-        # Iterate through each table and extract key-value pairs
-        for table in tables:
-            rows = table.find_all('tr')
-            for row in rows:
-                # Extract the header (key) and data (value)
-                header = row.find('th').get_text(strip=True) if row.find('th') else None
-                data = row.find('td').get_text(strip=True) if row.find('td') else None
-
-                # Add to the dictionary if both header and data exist
-                if header and data:
-                    scraped_data[header] = data
-
-        # Print the scraped data
-        print(scraped_data)
-        print("----------")
-        # Step 1: Extract Dimensions and SKU
-        dimensions = scraped_data.pop('Dimensions', None)  # Remove and get 'Dimensions'
-        sku = scraped_data.pop('SKU', None)  # Remove and get 'SKU'
-
-        # Step 2: Remove 'Price' from the dictionary
-        scraped_data.pop('Price', None)
-
-        # Step 3: Convert remaining data to a string, joining values with ","
-        # remaining_data_str = ";".join([str(value) for value in scraped_data.values()])
-        remaining_data_str= ",   ".join([f"{k}: {v}" for k, v in scraped_data.items()])
-        # Print the results
-        print("--------------------")
-        print("Dimensions:", dimensions.replace('"', "").replace("in", ""))
-        print("-------------------------")
-        print("SKU:", sku)
-        print("---------------------------")
-        print("Remaining Data:", remaining_data_str)
-
-
-        # Get all <p> tags within the disclaimer div
-        p_dsiclamer = soup.select(".disclaimer p")
-
-        # Extract text from the last <p> tag
-        disclamer = p_dsiclamer[-1].get_text(strip=True) if p_dsiclamer else None
-        print("---------------------------------------------")
-        print(disclamer)
-
-        product_images = soup.select("img.iconic-woothumbs-thumbnails__image.no-lazyload.skip-lazy")
-        if product_images:
-            product_images = [item.get("data-lazy").replace("180x180", "500x500") for item in product_images]
-        print("--------------------------------------------")
-        print(len(product_images))
-        print(product_images)
-
 
         product_description_div = soup.find("div",  class_ = 'woocommerce-product-details__short-description')
         if product_description_div:
@@ -179,6 +125,94 @@ def get_prod_html():
 
         print("------------")
         print(product_description)
+
+
+
+        scraped_data = {}
+        tables = soup.find_all('table', class_='shop_attributes product_meta')
+        for table in tables:
+            rows = table.find_all('tr')
+            for row in rows:
+                header = row.find('th').get_text(strip=True) if row.find('th') else None
+                data = row.find('td').get_text(strip=True) if row.find('td') else None
+                if header and data:
+                    scraped_data[header] = data
+
+        print(scraped_data)
+        print("----------")
+        dimensions = scraped_data.pop('Dimensions', None)
+        width = ""
+        height = ""
+        depth = ""
+        if dimensions:
+            dimensions = dimensions.replace("in", "").split('"')
+            for unit in dimensions:
+                if "D" in unit:
+                    depth = unit.replace("D", "")
+                if "W" in unit:
+                    width = unit.replace("W", "")
+                if "H" in unit:
+                    height = unit.replace("H", "")
+            if width == height == depth == "":
+                dimensions__ul =  product_description_div.find("ul")
+                dimensions__li = dimensions__ul.find_all("li")
+                if dimensions__li:
+                    width = []
+                    height = []
+                    depth = []
+                    for li in dimensions__li:
+                        text = li.get_text(strip=True)
+                        # print(text)
+                        if ":" in text:
+                            name, dims = text.split(":", 1)
+                            dims = dims.strip().split(" x ")
+                            # print(dims)
+                            
+                            if len(dims) == 3:
+                                width.append(dims[0])
+                                # print(width)
+                                depth.append(dims[1])
+                                height.append(dims[2])
+                    width = "; ".join(width)
+                    depth = "; ".join(depth)
+                    height = "; ".join(height)
+        print("------------------------------------")
+        print("Width", width)
+        print("Depth", depth)
+        print("Height", height)
+    
+
+
+        sku = scraped_data.pop('SKU', None) 
+        scraped_data.pop('Price', None)
+        remaining_data_str= ",   ".join([f"{k}: {v}" for k, v in scraped_data.items()])
+
+        print("-------------------------")
+        print("SKU:", sku)
+        print("---------------------------")
+        print("Remaining Data:", remaining_data_str)
+        p_dsiclamer = soup.select(".disclaimer p")
+        disclamer = p_dsiclamer[-1].get_text(strip=True) if p_dsiclamer else None
+        print("---------------------------------------------")
+        print(disclamer)
+
+
+
+
+
+        product_images = soup.select("img.iconic-woothumbs-thumbnails__image.no-lazyload.skip-lazy")
+        if product_images:                  
+            product_images = [
+                (img.replace("180x180", "500x500") if "500x500" in item.get("data-srcset", "") else img)
+                for item in product_images
+                if (img := item.get("data-lazy") or item.get("src"))
+            ]
+            print("--------------------------------------------")
+            print(len(product_images))
+            print(product_images)
+
+
+
 
 
         collection = soup.find("h1", class_ = "product_title entry-title")
