@@ -1,3 +1,5 @@
+from twisted.internet import asyncioreactor
+asyncioreactor.install()
 import re
 import scrapy
 import os
@@ -103,7 +105,9 @@ def get_collections_products():
 def get_prod_html():
     # url = 'https://www.barcalounger.com/view-all-options/anaheim-power-recline?attribute_pa_covers=dobbs-saddle'
     # url = "https://www.barcalounger.com/view-all-options/langston-power-lift-recline?attribute_pa_covers=venzia-blue"
-    url = "https://www.barcalounger.com/view-all-options/monico?attribute_pa_covers=ashland-granite"
+    # url = "https://www.barcalounger.com/view-all-options/monico?attribute_pa_covers=ashland-granite"
+    url = "https://www.barcalounger.com/view-all-options/byron"
+
     with sync_playwright() as p:
         browser = p.chromium.launch(headless=True)
         page = browser.new_page()
@@ -116,85 +120,10 @@ def get_prod_html():
 
 
 
-        product_description_div = soup.find("div",  class_ = 'woocommerce-product-details__short-description')
-        if product_description_div:
-            product_description = product_description_div.find("p").text.strip()
+ 
 
-        else:
-            product_description=""
-
-        print("------------")
-        print(product_description)
-
-
-
-        scraped_data = {}
-        tables = soup.find_all('table', class_='shop_attributes product_meta')
-        for table in tables:
-            rows = table.find_all('tr')
-            for row in rows:
-                header = row.find('th').get_text(strip=True) if row.find('th') else None
-                data = row.find('td').get_text(strip=True) if row.find('td') else None
-                if header and data:
-                    scraped_data[header] = data
-
-        print(scraped_data)
-        print("----------")
-        dimensions = scraped_data.pop('Dimensions', None)
-        width = ""
-        height = ""
-        depth = ""
-        if dimensions:
-            dimensions = dimensions.replace("in", "").split('"')
-            for unit in dimensions:
-                if "D" in unit:
-                    depth = unit.replace("D", "")
-                if "W" in unit:
-                    width = unit.replace("W", "")
-                if "H" in unit:
-                    height = unit.replace("H", "")
-            if width == height == depth == "":
-                dimensions__ul =  product_description_div.find("ul")
-                dimensions__li = dimensions__ul.find_all("li")
-                if dimensions__li:
-                    width = []
-                    height = []
-                    depth = []
-                    for li in dimensions__li:
-                        text = li.get_text(strip=True)
-                        # print(text)
-                        if ":" in text:
-                            name, dims = text.split(":", 1)
-                            dims = dims.strip().split(" x ")
-                            # print(dims)
-                            
-                            if len(dims) == 3:
-                                width.append(dims[0])
-                                # print(width)
-                                depth.append(dims[1])
-                                height.append(dims[2])
-                    width = "; ".join(width)
-                    depth = "; ".join(depth)
-                    height = "; ".join(height)
-        print("------------------------------------")
-        print("Width", width)
-        print("Depth", depth)
-        print("Height", height)
+   
     
-
-
-        sku = scraped_data.pop('SKU', None) 
-        scraped_data.pop('Price', None)
-        remaining_data_str= ",   ".join([f"{k}: {v}" for k, v in scraped_data.items()])
-
-        print("-------------------------")
-        print("SKU:", sku)
-        print("---------------------------")
-        print("Remaining Data:", remaining_data_str)
-        p_dsiclamer = soup.select(".disclaimer p")
-        disclamer = p_dsiclamer[-1].get_text(strip=True) if p_dsiclamer else None
-        print("---------------------------------------------")
-        print(disclamer)
 
 
 
@@ -215,28 +144,21 @@ def get_prod_html():
 
 
 
-        collection = soup.find("h1", class_ = "product_title entry-title")
-        collection = collection.text.strip()
-
-        print("--------------")
-        print(collection)
-
-
-        assembly_pdf = soup.find("a", class_ = "assembly-instructions")
-        if assembly_pdf:
-            assembly_pdf = assembly_pdf.get("href")
-        else:
-            assembly_pdf = ""
-
-        print("---------------")
-        print(assembly_pdf)
-
+        
 
 # --------------------------------------------------------------------------------------------------------------------------------------------
 
 class ProductSpider(scrapy.Spider):
     name = "product_spider"
     custom_settings = {
+        'DOWNLOAD_HANDLERS': {
+            'http': 'scrapy_playwright.handler.ScrapyPlaywrightDownloadHandler',
+            'https': 'scrapy_playwright.handler.ScrapyPlaywrightDownloadHandler',
+        },
+        'PLAYWRIGHT_LAUNCH_OPTIONS': {
+            'headless': True,
+            'timeout': 100000,
+        },
         'DUPEFILTER_CLASS': 'scrapy.dupefilters.BaseDupeFilter',
         'CONCURRENT_REQUESTS': 1,
         'LOG_LEVEL': 'INFO',
@@ -246,11 +168,12 @@ class ProductSpider(scrapy.Spider):
         'HTTPERROR_ALLOW_ALL': True,
         'DEFAULT_REQUEST_HEADERS': {
             'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) ' \
-                          'AppleWebKit/537.36 (KHTML, like Gecko) ' \
-                          'Chrome/115.0.0.0 Safari/537.36',
+                        'AppleWebKit/537.36 (KHTML, like Gecko) ' \
+                        'Chrome/115.0.0.0 Safari/537.36',
             'Accept-Language': 'en',
         },
     }
+    
 
     columns = [
         "SKU", "START_DATE", "END_DATE", "DATE_QUALIFIER", "DISCONTINUED", "BRAND", "PRODUCT_GROUP1",
@@ -275,11 +198,11 @@ class ProductSpider(scrapy.Spider):
         super().__init__(*args, **kwargs)
         self.input_file = input_file
         os.makedirs('output', exist_ok=True)
-        self.bassett_mirror_company_file = open('output/bassett_mirror_companye.csv', 'w', newline='', encoding='utf-8')
+        self.barcalounge_file = open('output/barcalounge.csv', 'w', newline='', encoding='utf-8')
 
-        self.bassett_mirror_company_writer = csv.DictWriter(self.bassett_mirror_company_file, fieldnames=self.columns)
+        self.barcalounge_writer = csv.DictWriter(self.barcalounge_file, fieldnames=self.columns)
 
-        self.bassett_mirror_company_writer.writeheader()
+        self.barcalounge_writer.writeheader()
 
 
     def start_requests(self):
@@ -289,201 +212,197 @@ class ProductSpider(scrapy.Spider):
             for row in reader:
                 yield scrapy.Request(
                     url=row['product_link'],
-                    callback=self.parse,
                     meta={
-                        'product_link': row['product_link']
-                    }
+                        'playwright': True,
+                        'playwright_include_page': True,
+                        'product': row
+                    },
+                    callback=self.parse,
+                    errback=self.handle_error
                 )
-    def parse(self, response):
-        self.logger.info(f"Parsing product: {response.url}")
+    async def parse(self, response):
+        product = response.meta['product']
+        self.logger.info(f"Parsing product: {product['product_link']}")
         sku = ""
-        product_title = ""
         width = ""
         depth = ""
         height = ""
-        description = ""
-        material = ""
-        finish = ""
-        category1 = ""
-        category2 = ""
-        category3 = ""
-        collection = ''
-        products_images = []
+        product_images = []
         product_description = ""
-        specifications = ""
         specifications_str = ""
-        catalog_pdf = ""
+        assembly_pdf = ""
+        collection = ""
+        disclamer = ""
+        limited_warranty = ""
         try:
-            meta = response.meta
-            soup = BeautifulSoup(response.text, 'html.parser')
-
+            page = response.meta['playwright_page']
+            content = await page.content()
+            soup = BeautifulSoup(content, 'html.parser')
             data = {col: "" for col in self.columns} 
 
+            product_description_div = soup.find("div",  class_ = 'woocommerce-product-details__short-description')
+            if product_description_div:
+                product_description = product_description_div.find("p").text.strip()
+
+            else:
+                product_description=""
 
             try:
-                spec = soup.find('div', class_="spec").get_text().strip()
-                clean_spec = spec.replace('\xa0', ' ')
-                if "|" in clean_spec:
-                    sku, dim = clean_spec.split("|")
-                    sku = sku.strip()
-                    dim = dim.strip()
-                    dims = dim.split("x")
-                    if len(dims)==3:
-                        width, depth, height = dims
-                    elif len(dims)==2:
-                        width, height = dims
-                else:
-                    sku = clean_spec
-                    width, depth, height = ""
- 
+                scraped_data = {}
+                tables = soup.find_all('table', class_='shop_attributes product_meta')
+                for table in tables:
+                    rows = table.find_all('tr')
+                    for row_ in rows:
+                        header = row_.find('th').get_text(strip=True) if row_.find('th') else None
+                        data_ = row_.find('td').get_text(strip=True) if row_.find('td') else None
+                        if header and data_:
+                            scraped_data[header] = data_
+                dimensions = scraped_data.pop('Dimensions', None)
+                width = ""
+                height = ""
+                depth = ""
+                if dimensions:
+                    dimensions = dimensions.replace("in", "").split('"')
+                    for unit in dimensions:
+                        if "D" in unit:
+                            depth = unit.replace("D", "")
+                        if "W" in unit:
+                            width = unit.replace("W", "")
+                        if "H" in unit:
+                            height = unit.replace("H", "")
+                    if width == height == depth == "":
+                        dimensions__ul =  product_description_div.find("ul")
+                        if dimensions__ul:
+                            dimensions__li = dimensions__ul.find_all("li")
+                            if dimensions__li:
+                                width = []
+                                height = []
+                                depth = []
+                                for li in dimensions__li:
+                                    text = li.get_text(strip=True)
+                                    
+                                    if ":" in text:
+                                        name, dims = text.split(":", 1)
+                                        dims = dims.strip().split(" x ")
+                                        
+                                        if len(dims) == 3:
+                                            width.append(dims[0])
+                                            depth.append(dims[1])
+                                            height.append(dims[2])
+                                width = "; ".join(width)
+                                depth = "; ".join(depth)
+                                height = "; ".join(height)
+                        else:
+                            pass
+                
+            
+
+
+                sku = scraped_data.pop('SKU', None) 
+                scraped_data.pop('Price', None)
+                remaining_data_str= ",   ".join([f"{k}: {v}" for k, v in scraped_data.items()])
+                specifications_str = remaining_data_str
             except Exception as e:
                 print("An error occurred while extracting SKU:", str(e))
 
 
             try:
-                product_title = soup.find("span", class_ = "pageTitle")
-                if product_title:
-                    product_title = product_title.text.strip()
+                collection = soup.find("h1", class_ = "product_title entry-title")
+                collection = collection.text.strip()
             except AttributeError:
-                product_title = ""
+                collection = ""
 
-            try:
-                description_container = soup.find("div", class_="col span_1_of_3")
-                if description_container:
-                    description_paragraph = description_container.find("p")
-                    if description_paragraph:
-                        product_description = description_paragraph.get_text(strip=True)
-            except AttributeError:
-                product_description = ""
+            assembly_pdf = soup.find("a", class_ = "assembly-instructions")
+            if assembly_pdf:
+                assembly_pdf = assembly_pdf.get("href")
+            else:
+                assembly_pdf = ""
 
-            try:
-                specifiation_div = soup.find("div", class_ = "panel" )
-                specifications = {}
-                if specifiation_div:
-                    items = specifiation_div.find_all('li')
-                    if items:
-                        for item in items:
-                            key, value = item.get_text().split(":", 1)
-                            specifications[key] = value
 
-                if specifications:
-                    style = specifications.get("Style", None)
-                    material = specifications.get("Material", None)
-                    finish = specifications.get("Color/Finish", None)
-                specifications_str = "; ".join([f"{k}: {v}" for k, v in specifications.items()])
-            except AttributeError:
-                specifications_str = ""
-
-            paths_div = soup.find("div", class_ = "master-width breadcrumbs")
-            if paths_div:
-                paths_span = paths_div.find("span", class_ = "breadcrumbs")
-                if paths_span:
-                    paths = paths_span.get_text(strip = True).split("/")
-
-                    if len(paths) ==4:
-                        category1 = paths[0]
-                        category2 = paths[1]
-                        category3 = paths[2]
-                        collection = paths[3]
-                    elif len(paths)==3:
-                        category1 = paths[0]
-                        category2 = paths[1]
-                        collection = paths[2]
-
-            try:
-                description_div = soup.find('div', class_ = 'spec spec_desc')
-                description = []
-                if description_div:
-                    description_items = description_div.find_all("td")
-                    if description_items:
-                        for item in description_items:
-                            description.append(item.get_text(strip = True))
-            except AttributeError:
-                description = ""
+            p_dsiclamer = soup.select(".disclaimer p")
+            if p_dsiclamer:
+                disclamer = p_dsiclamer[-1].get_text(strip=True) if p_dsiclamer else None
+            else:
+                disclamer = ""
                
-            try:
-                catalog_pdf = soup.find('a', class_ = "btn-tearsheet")
-                if catalog_pdf:
-                    catalog_pdf = catalog_pdf.get("href")
-            except:
-                catalog_pdf = ""
+            limited_warranty = """
+                BarcaLounger conveys the following Limited Warranty to the original retail purchaser under normal residential use and does not cover any type of commercial, industrial, institutional, or rental use. This warranty does not cover “floor samples” sold or products designated “as is” at the time of purchase. This warranty does not apply to furniture intentionally misused, or to damage resulting from negligence, exposure, pet damage, chemical treatment, improper cleaning, or when heavy soiling or abuse is evident. This warranty does not cover damage caused by improper transportation.  This warranty is not transferable. This warranty supersedes and replaces all implied warranties of merchantability and use for a particular purpose.
+            """
 
             data.update({
-                "CATEGORY1": category1,
-                "CATEGORY2": category2,
-                "CATEGORY3": category3,
+                "CATEGORY1": product["category1"],
+                "CATEGORY2": product["category2"],
                 "COLLECTION": collection,
-                "ITEM_URL": meta['product_link'],
+                "ITEM_URL": product['product_link'],
                 "SKU": sku,
-                "DESCRIPTION": ", ".join(description) if isinstance(description, list) else description,
+                "DESCRIPTION": collection,
                 "PRODUCT_DESCRIPTION": product_description,
                 "WIDTH": width,
                 "DEPTH": depth,
                 "HEIGHT": height,
-                "STYLE": style,
-                "ADDITIONAL_INFORMATION": material,
-                "FINISH1": finish,
+                "ADDITIONAL_INFORMATION": specifications_str,
                 "CONSTRUCTION": "", 
                 "SPECIFICATIONS": specifications_str,
-                "BRAND": "Bassett Mirror",
+                "BRAND": "Barcalounge",
                 "VIEWTYPE": "Normal",  
-                "CATALOG_PDF" : catalog_pdf, 
+                "INFO1" : assembly_pdf, 
+                "WARRANTY" : limited_warranty,
+                "DISCLAIMER" : disclamer,
             })
 
-            try:
-                image_urls = []
-                gallery_div = soup.find("div", id="gallery")
-                if gallery_div:
-                    image_divs = gallery_div.find_all("div", class_="tn")
-                    for div in image_divs:
-                        st = div.get("style")
-                        if st:
-                            url_match = re.search(r'background-image:url\((.*?)\);', st)
-                            if url_match:
-                                image_urls.append(url_match.group(1))
-                                products_images = image_urls
-            except AttributeError:
-                products_images = []
+            product_images = soup.select("img.iconic-woothumbs-thumbnails__image.no-lazyload.skip-lazy")
+            if product_images:                  
+                product_images = [
+                    (img.replace("180x180", "500x500") if "500x500" in item.get("data-srcset", "") else img)
+                    for item in product_images
+                    if (img := item.get("data-lazy") or item.get("src"))
+                ]
+            else:
+                product_images = []
 
-            if len(products_images) == 0:
-                img_url = soup.find("div", id = "main-image")
-                if img_url:
-                    img_url = img_url.get("style")
-                    img_url = re.search(r'background-image:url\((.*?)\);', img_url)
-                    img_url = img_url.group(1)
-                    products_images.append(img_url)
+            if len(product_images) == 0:
                 
+                img_url = soup.find("img", class_ = "iconic-woothumbs-images__image no-lazyload skip-lazy")
+                if img_url:
+                    product_images.append(img_url.get("src"))
             for i in range(1, 11):
                 data[f"PHOTO{i}"] = ""
-            for idx, img_url in enumerate(products_images):
+            for idx, img_url in enumerate(product_images):
                 if idx > 9:
                     continue
                 else:
                     data[f"PHOTO{idx + 1}"] = img_url
-            if len(products_images) < 10:
-                self.logger.info(f"Only {len(products_images)} images found for {meta['product_link']}. Remaining PHOTO columns will be ''.")
-            elif len(products_images) > 10:
-                self.logger.warning(f"More than 10 images found for {meta['product_link']}. Only the first 10 will be saved.")
+            if len(product_images) < 10:
+                self.logger.info(f"Only {len(product_images)} images found for {product['product_link']}. Remaining PHOTO columns will be ''.")
+            elif len(product_images) > 10:
+                self.logger.warning(f"More than 10 images found for {product['product_link']}. Only the first 10 will be saved.")
 
-            if len(products_images) == 0:
+            if len(product_images) == 0:
                 data.update({
                     "VIEWTYPE": "Limited",
                 })
 
             if sku:
-                self.bassett_mirror_company_writer.writerow(data)
-                self.logger.info(f"Successfully scraped and categorized product: {meta['product_link']}")
+                self.barcalounge_writer.writerow(data)
+                self.logger.info(f"Successfully scraped and categorized product: {product['product_link']}")
             else:
+                self.barcalounge_writer.writerow(data)
+                # self.logger.info(f"Successfully scraped and categorized product: {product['product_link']}")
                 self.logger.info("############################ Missing SKU Detected  ###########################################")
-                self.logger.info(soup.find('div', class_="spec").get_text().strip())
-                self.logger.info("Product link : ", meta['product_link'])
-                self.logger.info("############################ Missing SKU Detected  ###########################################")
+                self.logger.info(f"Product link : {product['product_link']} ")
+                self.logger.info("############################ Ending of the warning  ###########################################")
         except Exception as e:
-            self.logger.error(f"Error parsing product: {response.url}, {e}")
-
+            self.logger.error(f"Error parsing {response.url}: {e}")
+        finally:
+            await page.close()
+    
+    def handle_error(self, failure):
+        self.logger.error(f"Request failed: {failure.request.url}")
+        self.logger.error(repr(failure))
+    
     def closed(self, reason):
-        self.bassett_mirror_company_file.close()
-        self.logger.info("Spider closed. Files saved.")
+        self.barcalounge_file.close()
+        self.logger.info("Spider closed: %s", reason)
  
 
 
@@ -493,7 +412,7 @@ if __name__ == "__main__":
     output_dir = 'utilities'
     os.makedirs(output_dir, exist_ok=True)
     # get_collections_products()
-    get_prod_html()
-    # process = CrawlerProcess()
-    # process.crawl(ProductSpider)
-    # process.start()
+    # get_prod_html()
+    process = CrawlerProcess()
+    process.crawl(ProductSpider)
+    process.start()
