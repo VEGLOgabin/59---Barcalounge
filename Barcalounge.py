@@ -104,9 +104,9 @@ def get_collections_products():
 
 def get_prod_html():
     # url = 'https://www.barcalounger.com/view-all-options/anaheim-power-recline?attribute_pa_covers=dobbs-saddle'
-    # url = "https://www.barcalounger.com/view-all-options/langston-power-lift-recline?attribute_pa_covers=venzia-blue"
+    url = "https://www.barcalounger.com/view-all-options/langston-power-lift-recline?attribute_pa_covers=venzia-blue"
     # url = "https://www.barcalounger.com/view-all-options/monico?attribute_pa_covers=ashland-granite"
-    url = "https://www.barcalounger.com/view-all-options/byron"
+    # url = "https://www.barcalounger.com/view-all-options/byron"
 
     with sync_playwright() as p:
         browser = p.chromium.launch(headless=True)
@@ -119,29 +119,61 @@ def get_prod_html():
             file.write(soup.prettify())
 
 
+        scraped_data = {}
+        tables = soup.find_all('table', class_='shop_attributes product_meta')
+        for table in tables:
+            rows = table.find_all('tr')
+            for row_ in rows:
+                header = row_.find('th').get_text(strip=True) if row_.find('th') else None
+                data_ = row_.find('td').get_text(strip=True) if row_.find('td') else None
+                if header and data_:
+                    scraped_data[header] = data_
+        dimensions = scraped_data.pop('Dimensions', None)
+        width = ""
+        height = ""
+        depth = ""
+        if dimensions:
+            dimensions = dimensions.replace("in", "").split('"')
+            for unit in dimensions:
+                if "D" in unit:
+                    depth = unit.replace("D", "")
+                if "W" in unit:
+                    width = unit.replace("W", "")
+                if "H" in unit:
+                    height = unit.replace("H", "")
 
- 
-
-   
-    
-
-
+        sku = scraped_data.pop('SKU', None) 
+        scraped_data.pop('Price', None)
+        remaining_data_str= ",   ".join([f"{k}: {v}" for k, v in scraped_data.items()])
+        specifications_str = remaining_data_str
 
 
 
-        product_images = soup.select("img.iconic-woothumbs-thumbnails__image.no-lazyload.skip-lazy")
-        if product_images:                  
-            product_images = [
-                (img.replace("180x180", "500x500") if "500x500" in item.get("data-srcset", "") else img)
-                for item in product_images
-                if (img := item.get("data-lazy") or item.get("src"))
-            ]
-            print("--------------------------------------------")
-            print(len(product_images))
-            print(product_images)
+
+        weight = scraped_data.pop("Weight", None)
+        if weight:
+            weight = weight.replace('bs', "")
+
+        arm_height = scraped_data.pop("Arm Height", None)
+
+        seat_dimensions = scraped_data.pop("Seat Dimensions", None)
+        seat_width = ""
+        seat_height = ""
+        seat_depth = ""
+        if seat_dimensions:
+            seat_dimensions = dimensions.replace("in", "").split('"')
+            for unit in seat_dimensions:
+                if "D" in unit:
+                    seat_depth = unit.replace("D", "")
+                if "W" in unit:
+                    seat_width = unit.replace("W", "")
+                if "H" in unit:
+                    seat_heightt = unit.replace("H", "")
 
 
 
+        print("-------------------------------------")
+        print(scraped_data)
 
 
         
@@ -243,7 +275,6 @@ class ProductSpider(scrapy.Spider):
             product_description_div = soup.find("div",  class_ = 'woocommerce-product-details__short-description')
             if product_description_div:
                 product_description = product_description_div.find("p").text.strip()
-
             else:
                 product_description=""
 
@@ -300,6 +331,34 @@ class ProductSpider(scrapy.Spider):
 
                 sku = scraped_data.pop('SKU', None) 
                 scraped_data.pop('Price', None)
+
+
+                weight = scraped_data.pop("Weight", None)
+                if weight:
+                    weight = weight.replace("lbs", "")
+
+                arm_height = scraped_data.pop("Arm Height", None)
+
+                seat_dimensions = scraped_data.pop("Seat Dimensions", None)
+                seat_width = ""
+                seat_height = ""
+                seat_depth = ""
+                if seat_dimensions:
+                    seat_dimensions = seat_dimensions.replace("in", "").split('"')
+                    for unit in seat_dimensions:
+                        if "D" in unit:
+                            seat_depth = unit.replace("D", "")
+                        if "W" in unit:
+                            seat_width = unit.replace("W", "")
+                        if "H" in unit:
+                            seat_heightt = unit.replace("H", "")
+
+
+
+     
+
+
+
                 remaining_data_str= ",   ".join([f"{k}: {v}" for k, v in scraped_data.items()])
                 specifications_str = remaining_data_str
             except Exception as e:
@@ -348,6 +407,11 @@ class ProductSpider(scrapy.Spider):
                 "INFO1" : assembly_pdf, 
                 "WARRANTY" : limited_warranty,
                 "DISCLAIMER" : disclamer,
+                "SEAT_DEPTH" : seat_depth, 
+                "SEAT_HEIGHT" : seat_height, 
+                "SEAT_WIDTH" : seat_width, 
+                "WEIGHT" : weight,
+                "ARM_HEIGHT" : arm_height,
             })
 
             product_images = soup.select("img.iconic-woothumbs-thumbnails__image.no-lazyload.skip-lazy")
