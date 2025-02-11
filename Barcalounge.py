@@ -189,7 +189,7 @@ class ProductSpider(scrapy.Spider):
         },
         'PLAYWRIGHT_LAUNCH_OPTIONS': {
             'headless': True,
-            'timeout': 100000,
+            'timeout': 200000,
         },
         'DUPEFILTER_CLASS': 'scrapy.dupefilters.BaseDupeFilter',
         'CONCURRENT_REQUESTS': 1,
@@ -351,7 +351,7 @@ class ProductSpider(scrapy.Spider):
                         if "W" in unit:
                             seat_width = unit.replace("W", "")
                         if "H" in unit:
-                            seat_heightt = unit.replace("H", "")
+                            seat_height = unit.replace("H", "")
 
 
 
@@ -417,7 +417,7 @@ class ProductSpider(scrapy.Spider):
             product_images = soup.select("img.iconic-woothumbs-thumbnails__image.no-lazyload.skip-lazy")
             if product_images:                  
                 product_images = [
-                    (img.replace("180x180", "500x500") if "500x500" in item.get("data-srcset", "") else img)
+                    (img.replace("-180x180", "") if "500x500" in item.get("data-srcset", "") else img)
                     for item in product_images
                     if (img := item.get("data-lazy") or item.get("src"))
                 ]
