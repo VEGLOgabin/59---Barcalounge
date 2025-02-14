@@ -102,78 +102,78 @@ def get_collections_products():
 # ----------------------------------------    Get product page html  ----------------------------------------------------------------
 
 
-def get_prod_html():
-    # url = 'https://www.barcalounger.com/view-all-options/anaheim-power-recline?attribute_pa_covers=dobbs-saddle'
-    url = "https://www.barcalounger.com/view-all-options/langston-power-lift-recline?attribute_pa_covers=venzia-blue"
-    # url = "https://www.barcalounger.com/view-all-options/monico?attribute_pa_covers=ashland-granite"
-    # url = "https://www.barcalounger.com/view-all-options/byron"
+# def get_prod_html():
+#     # url = 'https://www.barcalounger.com/view-all-options/anaheim-power-recline?attribute_pa_covers=dobbs-saddle'
+#     url = "https://www.barcalounger.com/view-all-options/langston-power-lift-recline?attribute_pa_covers=venzia-blue"
+#     # url = "https://www.barcalounger.com/view-all-options/monico?attribute_pa_covers=ashland-granite"
+#     # url = "https://www.barcalounger.com/view-all-options/byron"
 
-    with sync_playwright() as p:
-        browser = p.chromium.launch(headless=True)
-        page = browser.new_page()
+#     with sync_playwright() as p:
+#         browser = p.chromium.launch(headless=True)
+#         page = browser.new_page()
 
-        page.goto(url)
-        content = page.content()
-        soup = BeautifulSoup(content, 'html.parser')
-        with open("product.html", "w", encoding="utf-8") as file:
-            file.write(soup.prettify())
-
-
-        scraped_data = {}
-        tables = soup.find_all('table', class_='shop_attributes product_meta')
-        for table in tables:
-            rows = table.find_all('tr')
-            for row_ in rows:
-                header = row_.find('th').get_text(strip=True) if row_.find('th') else None
-                data_ = row_.find('td').get_text(strip=True) if row_.find('td') else None
-                if header and data_:
-                    scraped_data[header] = data_
-        dimensions = scraped_data.pop('Dimensions', None)
-        width = ""
-        height = ""
-        depth = ""
-        if dimensions:
-            dimensions = dimensions.replace("in", "").split('"')
-            for unit in dimensions:
-                if "D" in unit:
-                    depth = unit.replace("D", "")
-                if "W" in unit:
-                    width = unit.replace("W", "")
-                if "H" in unit:
-                    height = unit.replace("H", "")
-
-        sku = scraped_data.pop('SKU', None) 
-        scraped_data.pop('Price', None)
-        remaining_data_str= ",   ".join([f"{k}: {v}" for k, v in scraped_data.items()])
-        specifications_str = remaining_data_str
+#         page.goto(url)
+#         content = page.content()
+#         soup = BeautifulSoup(content, 'html.parser')
+#         with open("product.html", "w", encoding="utf-8") as file:
+#             file.write(soup.prettify())
 
 
+#         scraped_data = {}
+#         tables = soup.find_all('table', class_='shop_attributes product_meta')
+#         for table in tables:
+#             rows = table.find_all('tr')
+#             for row_ in rows:
+#                 header = row_.find('th').get_text(strip=True) if row_.find('th') else None
+#                 data_ = row_.find('td').get_text(strip=True) if row_.find('td') else None
+#                 if header and data_:
+#                     scraped_data[header] = data_
+#         dimensions = scraped_data.pop('Dimensions', None)
+#         width = ""
+#         height = ""
+#         depth = ""
+#         if dimensions:
+#             dimensions = dimensions.replace("in", "").split('"')
+#             for unit in dimensions:
+#                 if "D" in unit:
+#                     depth = unit.replace("D", "")
+#                 if "W" in unit:
+#                     width = unit.replace("W", "")
+#                 if "H" in unit:
+#                     height = unit.replace("H", "")
 
-
-        weight = scraped_data.pop("Weight", None)
-        if weight:
-            weight = weight.replace('bs', "")
-
-        arm_height = scraped_data.pop("Arm Height", None)
-
-        seat_dimensions = scraped_data.pop("Seat Dimensions", None)
-        seat_width = ""
-        seat_height = ""
-        seat_depth = ""
-        if seat_dimensions:
-            seat_dimensions = dimensions.replace("in", "").split('"')
-            for unit in seat_dimensions:
-                if "D" in unit:
-                    seat_depth = unit.replace("D", "")
-                if "W" in unit:
-                    seat_width = unit.replace("W", "")
-                if "H" in unit:
-                    seat_heightt = unit.replace("H", "")
+#         sku = scraped_data.pop('SKU', None) 
+#         scraped_data.pop('Price', None)
+#         remaining_data_str= ",   ".join([f"{k}: {v}" for k, v in scraped_data.items()])
+#         specifications_str = remaining_data_str
 
 
 
-        print("-------------------------------------")
-        print(scraped_data)
+
+#         weight = scraped_data.pop("Weight", None)
+#         if weight:
+#             weight = weight.replace('bs', "")
+
+#         arm_height = scraped_data.pop("Arm Height", None)
+
+#         seat_dimensions = scraped_data.pop("Seat Dimensions", None)
+#         seat_width = ""
+#         seat_height = ""
+#         seat_depth = ""
+#         if seat_dimensions:
+#             seat_dimensions = dimensions.replace("in", "").split('"')
+#             for unit in seat_dimensions:
+#                 if "D" in unit:
+#                     seat_depth = unit.replace("D", "")
+#                 if "W" in unit:
+#                     seat_width = unit.replace("W", "")
+#                 if "H" in unit:
+#                     seat_heightt = unit.replace("H", "")
+
+
+
+#         print("-------------------------------------")
+#         print(scraped_data)
 
 
         
@@ -475,8 +475,7 @@ if __name__ == "__main__":
 
     output_dir = 'utilities'
     os.makedirs(output_dir, exist_ok=True)
-    # get_collections_products()
-    # get_prod_html()
+    get_collections_products()
     process = CrawlerProcess()
     process.crawl(ProductSpider)
     process.start()

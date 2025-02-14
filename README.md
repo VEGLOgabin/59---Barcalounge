@@ -1,21 +1,47 @@
-# 59---Barcalounge
-59 - Barcalounge
+# Web Scraper for Barcalounger
 
-@Veglo Houetchenou Gabin You have formatted this output so well and it looks great!
+## Overview
+This project is a web scraper designed to extract product information from the Barcalounger website. It leverages Scrapy, Playwright, and BeautifulSoup to collect product links and details efficiently.
 
-Just a few things,
+## Features
+- Extracts product categories and subcategories
+- Retrieves product links from all collections
+- Scrolls dynamically to load more products
+- Saves extracted data in CSV format
+- Uses Scrapy for structured data extraction
+- Implements Playwright for handling dynamic content
 
-For items that have Seat Dimensions i.e. D 21.5" W 21.5" H 20.0" in most of them, Seat Height got forgotten which is just a minor ommision.
+## Installation
+### Prerequisites
+Ensure you have Python installed (>=3.7). Then, install the required dependencies:
 
-For images, i.e., (https://www.barcalounger.com/wp-content/uploads/2023/08/Logan-7-3014-7072-86-angle-2-sca)led-500x500.jpg) if you click on it, seems to be a broken link (Not all of them), 
-but if you remove the last part -scaled-500x500  -> 
-(https://www.barcalounger.com/wp-content/uploads/2023/08/Logan-7-3014-7072-86-angle-2.jpg)
-the link works.
+```sh
+pip install scrapy playwright beautifulsoup4 requests twisted
+playwright install
+```
 
-Still on images, i.e., (https://www.barcalounger.com/wp-content/uploads/2024/10/Jamie-7-3673-1097-96-1.jpg removing the last part -500x500  -> 
-(https://www.barcalounger.com/wp-content/uploads/2024/10/Jamie-7-3673-1097-96-1.jpg)
-the image quality increases.
+## Usage
+### Extracting Product Links
+To scrape product links and store them in `utilities/products-links.csv`:
 
-Other than those few changes, everything else looks awesome!
+```sh
+python -c 'import your_script; your_script.get_collections_products()'
+```
 
-https://www.barcalounger.com/wp-content/uploads/2023/05/Dawson-8038-3607-99-2-scaled-180x180.jpg
+### Running Scrapy Spider
+After obtaining the product links, run the Scrapy spider to extract detailed product information:
+
+```sh
+scrapy crawl product_spider
+```
+
+## Output
+- `utilities/products-links.csv`: Contains product categories and links
+- `output/`: Directory containing extracted product details
+
+## Notes
+- The scraper uses Playwright to handle infinite scrolling
+- Ensure JavaScript is enabled in Playwright for dynamic content loading
+
+## License
+This project is licensed under the MIT License.
